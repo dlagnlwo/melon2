@@ -12,4 +12,8 @@ public class PlayListCnt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int playCnt;
     private int songId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="songId")
+    private Song song;
 }

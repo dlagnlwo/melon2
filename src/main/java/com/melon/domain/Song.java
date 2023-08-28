@@ -4,6 +4,9 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 노래 테이블
 @Entity
 @Setter @Getter
@@ -23,4 +26,28 @@ public class Song {
     private int genreId;
     private int albumId;
     private int artistId;
+
+    @OneToMany(mappedBy = "song")
+    private List<PlayListNow> playListNows = new ArrayList<>();
+
+    @OneToMany(mappedBy = "song")
+    private List<PlayListCnt> playListCnts = new ArrayList<>();
+
+    @OneToMany(mappedBy = "song")
+    private List<PlayListRecente> playListRecentes = new ArrayList<>();
+
+    @OneToMany(mappedBy = "song")
+    private List<Artist> artists = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="albumId")
+    private Album album;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="genreId")
+    private Genre genre;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="artistId")
+    private Artist artist;
 }

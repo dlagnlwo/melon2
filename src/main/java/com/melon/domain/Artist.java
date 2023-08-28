@@ -3,8 +3,11 @@ package com.melon.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.ibatis.annotations.One;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // 가수 테이블
 @Entity
@@ -18,4 +21,10 @@ public class Artist {
     private String debut;
     private String agency;
     private String group;
+
+    @OneToMany(mappedBy = "artist")
+    private List<Song> songs = new ArrayList<>();
+
+    @OneToMany(mappedBy = "artist")
+    private List<Like> likes = new ArrayList<>();
 }

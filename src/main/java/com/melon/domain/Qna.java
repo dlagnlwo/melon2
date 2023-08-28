@@ -19,4 +19,8 @@ public class Qna {
     private String replyYn;
     private String qnaDate;
     private String memberId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "memberId")
+    private Member member;
 }

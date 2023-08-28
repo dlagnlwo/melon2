@@ -18,4 +18,12 @@ public class Comment {
     private String commentDate;
     private String memberId;
     private int albumId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "memberId")
+    private Member member;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "albumId")
+    private Album album;
 }

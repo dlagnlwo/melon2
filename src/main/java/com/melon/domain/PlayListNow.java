@@ -14,4 +14,12 @@ public class PlayListNow {
     private int playlistCd;
     private String memberId;
     private int songId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="memberId")
+    private Member member;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="songId")
+    private Song song;
 }

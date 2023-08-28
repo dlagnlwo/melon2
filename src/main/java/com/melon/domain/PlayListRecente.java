@@ -13,4 +13,8 @@ public class PlayListRecente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String streamingTime;
     private int songName;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="songName")
+    private Song song;
 }

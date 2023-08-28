@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // 회원 테이블
 
@@ -23,4 +25,17 @@ public class Member {
     private String role;
     @Column(length = 1)
     private char ticketId;
+
+    @OneToMany(mappedBy = "member")
+    private List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member")
+    private List<Qna> qnas = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member")
+    private List<PlayListNow> playListNows = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ticketId")
+    private Ticket ticket;
 }

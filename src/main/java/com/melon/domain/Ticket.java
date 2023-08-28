@@ -6,6 +6,9 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter @Setter
 @Table(name="ticket")
@@ -15,4 +18,8 @@ public class Ticket {
     @Column(length = 1)
     private String ticketId;
     private String ticketName;
+
+    @OneToMany(mappedBy = "ticket")
+    private List<Member> members = new ArrayList<>();
+
 }
