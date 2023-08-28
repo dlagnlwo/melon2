@@ -4,6 +4,7 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+// 재생목록
 @Entity
 @Getter @Setter
 @Table(name="playlist_cnt")
