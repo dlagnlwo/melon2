@@ -20,5 +20,5 @@ public class Member {
     @Column(length = 1)
     private String role;
     @Column(length = 1)
-    private char ticketId;
+    private String ticketId;
 }
