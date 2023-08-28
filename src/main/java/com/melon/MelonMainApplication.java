@@ -9,5 +9,4 @@ public class MelonMainApplication {
     public static void main(String[] args) {
         SpringApplication.run(MelonMainApplication.class, args);
     }
-
 }
