@@ -1,0 +1,18 @@
+package com.melon.domain;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+// 좋아요 테이블
+@Entity
+@Getter @Setter
+@Table(name="like")
+public class Like {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int likeCnt;
+    private int songId;
+    private int albumId;
+    private int artistId;
+}
