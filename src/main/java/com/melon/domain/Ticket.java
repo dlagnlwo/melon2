@@ -2,7 +2,7 @@ package com.melon.domain;
 
 // 이용권 테이블
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 

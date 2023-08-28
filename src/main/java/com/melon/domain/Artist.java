@@ -1,8 +1,10 @@
 package com.melon.domain;
 
-import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.*;
 
 // 가수 테이블
 @Entity

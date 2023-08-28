@@ -1,8 +1,10 @@
 package com.melon.domain;
 
-import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.*;
 
 // 회원 테이블
 
@@ -20,5 +22,5 @@ public class Member {
     @Column(length = 1)
     private String role;
     @Column(length = 1)
-    private String ticketId;
+    private char ticketId;
 }
