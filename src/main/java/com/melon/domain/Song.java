@@ -37,7 +37,19 @@ public class Song {
     private List<PlayListRecente> playListRecentes = new ArrayList<>();
 
     @OneToMany(mappedBy = "song")
-    private List<Artist> artists = new ArrayList<>();
+    private List<Like> likes = new ArrayList<>();
+
+    //N:N
+    @OneToMany(mappedBy = "song")
+    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
+
+    //N:N
+    @OneToMany(mappedBy = "song")
+    private List<PlayListCntSong> playListCntSongs = new ArrayList<>();
+
+    //N:N
+    @OneToMany(mappedBy = "song")
+    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="albumId")
