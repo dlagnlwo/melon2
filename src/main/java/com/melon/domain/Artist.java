@@ -22,9 +22,9 @@ public class Artist {
     private String agency;
     private String group;
 
-    @OneToMany(mappedBy = "artist")
-    private List<Song> songs = new ArrayList<>();
-
-    @OneToMany(mappedBy = "artist")
-    private List<Like> likes = new ArrayList<>();
+//    @OneToMany(mappedBy = "artist")
+//    private List<Song> songs = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "artist")
+//    private List<Like> likes = new ArrayList<>();
 }

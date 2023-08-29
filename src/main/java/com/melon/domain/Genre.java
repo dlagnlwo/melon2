@@ -19,6 +19,6 @@ public class Genre {
     private int genreId;
     private String genreName;
 
-    @OneToMany(mappedBy = "genre")
-    private List<Song> songs = new ArrayList<>();
+//    @OneToMany(mappedBy = "genre")
+//    private List<Song> songs = new ArrayList<>();
 }

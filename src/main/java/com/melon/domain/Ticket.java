@@ -18,8 +18,8 @@ public class Ticket {
     @Column(length = 1)
     private String ticketId;
     private String ticketName;
-
-    @OneToMany(mappedBy = "ticket")
-    private List<Member> members = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "ticket")
+//    private List<Member> members = new ArrayList<>();
 
 }

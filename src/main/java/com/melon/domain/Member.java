@@ -26,17 +26,17 @@ public class Member {
     @Column(length = 1)
     private char ticketId;
 
-    @OneToOne(mappedBy = "member")
-    private PlayListNow playListNow;
-
-    @OneToMany(mappedBy = "member")
-    private List<Comment> comments = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<Qna> qnas = new ArrayList<>();
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ticketId")
-    private Ticket ticket;
+//    @OneToOne(mappedBy = "member")
+//    private PlayListNow playListNow;
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Comment> comments = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Qna> qnas = new ArrayList<>();
+//
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "ticketId")
+//    private Ticket ticket;
 
 }

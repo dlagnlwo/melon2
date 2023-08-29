@@ -14,6 +14,7 @@ import java.util.List;
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "song_id")
     private int songId;
     private String songName;
     @Column(length = 1)
@@ -27,39 +28,31 @@ public class Song {
     private int albumId;
     private int artistId;
 
-    @OneToMany(mappedBy = "song")
-    private List<PlayListNow> playListNows = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<PlayListCnt> playListCnts = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<PlayListRecente> playListRecentes = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<Like> likes = new ArrayList<>();
-
-    //N:N
-    @OneToMany(mappedBy = "song")
-    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
-
-    //N:N
-    @OneToMany(mappedBy = "song")
-    private List<PlayListCntSong> playListCntSongs = new ArrayList<>();
-
-    //N:N
-    @OneToMany(mappedBy = "song")
-    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="albumId")
-    private Album album;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="genreId")
-    private Genre genre;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="artistId")
-    private Artist artist;
+//    @OneToMany(mappedBy = "song")
+//    private List<Like> likes = new ArrayList<>();
+//
+//    //N:N
+//    @OneToMany(mappedBy = "song")
+//    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
+//
+//    //N:N
+//    @OneToMany
+//    @JoinColumn(name = "song_id")
+//    private List<PlayListCntSong> playListCntSongs = new ArrayList<>();
+//
+//    //N:N
+//    @OneToMany(mappedBy = "song")
+//    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
+//
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name="albumId")
+//    private Album album;
+//
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name="genreId")
+//    private Genre genre;
+//
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name="artistId")
+//    private Artist artist;
 }

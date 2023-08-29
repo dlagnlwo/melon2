@@ -18,11 +18,11 @@ public class PlayListNow {
     private String memberId;
     private int songId;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="memberId")
-    private Member member;
-
-    @OneToMany(mappedBy = "playlist_now")
-    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name="memberId")
+//    private Member member;
+//
+//    @OneToMany(mappedBy = "playlist_now")
+//    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
 
 }

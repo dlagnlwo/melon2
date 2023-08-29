@@ -17,11 +17,8 @@ public class PlayListRecente {
     private String streamingTime;
     private int songName;
 
-    // N:N
-    @OneToMany(mappedBy = "playlist_recente")
-    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
+//    // N:N
+//    @OneToMany(mappedBy = "playlist_recente")
+//    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="songName")
-    private Song song;
 }

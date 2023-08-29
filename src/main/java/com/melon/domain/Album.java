@@ -22,14 +22,14 @@ public class Album {
     private byte[] albumImg;
     private String albumType;
     private String albumName;
-    private String likeCd;
+    private int likeCnt;
 
-    @OneToMany(mappedBy = "album")
-    private List<Album> albums = new ArrayList<>();
-
-    @OneToMany(mappedBy = "album")
-    private List<Song> songs = new ArrayList<>();
-
-    @OneToMany(mappedBy = "album")
-    private List<Like> likes = new ArrayList<>();
+//    @OneToMany(mappedBy = "album")
+//    private List<Comment> comments = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "album")
+//    private List<Song> songs = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "album")
+//    private List<Like> likes = new ArrayList<>();
 }

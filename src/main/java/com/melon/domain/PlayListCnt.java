@@ -13,14 +13,11 @@ import java.util.List;
 public class PlayListCnt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="play_cnt")
     private int playCnt;
     private int songId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="songId")
-    private Song song;
-
-    // N:N
-    @OneToMany(mappedBy = "playlist_cnt")
-    private List<PlayListCntSong> playListCntSongs = new ArrayList<>();
+//    // N:N
+//    @OneToMany(mappedBy = "playlist_cnt")
+//    private List<PlayListCntSong> playListCntSongs = new ArrayList<>();
 }
