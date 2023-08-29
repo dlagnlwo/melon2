@@ -11,12 +11,11 @@ public class PlayListRecenteSong {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "songId")
-//    private Song song;
-//
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "streamingTime")
-//    private PlayListRecente playListRecente;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "streamingTime")
+    private PlayListRecente playListRecente;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "songId")
+    private Song song;
 }

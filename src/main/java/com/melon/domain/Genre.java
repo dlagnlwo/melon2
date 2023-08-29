@@ -18,7 +18,4 @@ public class Genre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int genreId;
     private String genreName;
-
-//    @OneToMany(mappedBy = "genre")
-//    private List<Song> songs = new ArrayList<>();
 }

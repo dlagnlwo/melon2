@@ -15,21 +15,11 @@ import java.util.List;
 public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int albumId;
+    private Integer albumId;
     private String albumPro;
     private String releaseDate;
     @Lob
     private byte[] albumImg;
     private String albumType;
     private String albumName;
-    private int likeCnt;
-
-//    @OneToMany(mappedBy = "album")
-//    private List<Comment> comments = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "album")
-//    private List<Song> songs = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "album")
-//    private List<Like> likes = new ArrayList<>();
 }

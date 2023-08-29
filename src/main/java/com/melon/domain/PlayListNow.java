@@ -15,14 +15,8 @@ public class PlayListNow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int playlistCd;
-    private String memberId;
-    private int songId;
 
-//    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name="memberId")
-//    private Member member;
-//
-//    @OneToMany(mappedBy = "playlist_now")
-//    private List<PlayListNowSong> playListNowSongs = new ArrayList<>();
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "memberId")
+    private Member member;
 }

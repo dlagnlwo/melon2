@@ -14,12 +14,7 @@ import java.util.List;
 @Table(name="ticket")
 public class Ticket {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 1)
     private String ticketId;
     private String ticketName;
-//
-//    @OneToMany(mappedBy = "ticket")
-//    private List<Member> members = new ArrayList<>();
-
 }

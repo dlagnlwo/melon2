@@ -4,6 +4,7 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,12 +14,5 @@ import java.util.List;
 @Table(name="playlist_recente")
 public class PlayListRecente {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String streamingTime;
-    private int songName;
-
-//    // N:N
-//    @OneToMany(mappedBy = "playlist_recente")
-//    private List<PlayListRecenteSong> playListRecenteSongs = new ArrayList<>();
-
+    private LocalDateTime streamingTime;
 }
