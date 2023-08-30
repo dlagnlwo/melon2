@@ -17,4 +17,5 @@ public class Ticket {
     @Column(length = 1)
     private String ticketId;
     private String ticketName;
+    private int ticketPrice;
 }
