@@ -21,6 +21,7 @@ public class Artist {
     private String debut;
     private String agency;
     private String group;
+    private String artistPro;
 
     @OneToMany(mappedBy = "artist")
     private List<Song> songs = new ArrayList<>();
