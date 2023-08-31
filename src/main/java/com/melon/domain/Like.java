@@ -14,9 +14,6 @@ public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int likeCnt;
-    private int songId;
-    private int albumId;
-    private int artistId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "songId")

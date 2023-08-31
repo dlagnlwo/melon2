@@ -4,6 +4,8 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 // QNA 테이블
 @Entity
 @Getter @Setter
@@ -17,10 +19,9 @@ public class Qna {
     private String replyContent;
     @Column(length = 1)
     private String replyYn;
-    private String qnaDate;
-    private String memberId;
+    private Date qnaDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "memberId")
+    @JoinColumn(name="memberId")
     private Member member;
 }

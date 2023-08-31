@@ -22,32 +22,16 @@ public class Song {
     private byte[] songFile;
     private String playTime;
     private String lyrics;
-    private int playCount;
-    private int genreId;
-    private int albumId;
-    private int artistId;
-
-    @OneToMany(mappedBy = "song")
-    private List<PlayListNow> playListNows = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<PlayListCnt> playListCnts = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<PlayListRecente> playListRecentes = new ArrayList<>();
-
-    @OneToMany(mappedBy = "song")
-    private List<Artist> artists = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="albumId")
+    @JoinColumn(name = "albumId")
     private Album album;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="genreId")
-    private Genre genre;
+    @JoinColumn(name = "artistId")
+    private Artist artist;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="artistId")
-    private Artist artist;
+    @JoinColumn(name = "genreId")
+    private Genre genre;
 }

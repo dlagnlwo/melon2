@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,19 +24,9 @@ public class Member {
     private String tel;
     @Column(length = 1)
     private String role;
-    @Column(length = 1)
-    private char ticketId;
-
-    @OneToMany(mappedBy = "member")
-    private List<Comment> comments = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<Qna> qnas = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<PlayListNow> playListNows = new ArrayList<>();
+    private LocalDateTime ticketDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ticketId")
+    @JoinColumn(name="ticketId")
     private Ticket ticket;
 }

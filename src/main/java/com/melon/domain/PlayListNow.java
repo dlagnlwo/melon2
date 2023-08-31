@@ -4,6 +4,9 @@ import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 현재 재생 목록 테이블
 @Entity
 @Getter @Setter
@@ -12,14 +15,8 @@ public class PlayListNow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int playlistCd;
-    private String memberId;
-    private int songId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="memberId")
+    @JoinColumn(name = "memberId")
     private Member member;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="songId")
-    private Song song;
 }
