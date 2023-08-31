@@ -9,7 +9,7 @@ import javax.persistence.*;
 // 좋아요 테이블
 @Entity
 @Getter @Setter
-@Table(name="like")
+@Table(name="user_like")
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

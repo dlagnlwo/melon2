@@ -17,7 +17,7 @@ import java.util.List;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String memberId;
+    private int memberId; // 하이버네이트 사용 시에만 int를 사용하고 실제 DB에선 varchar로 사용하는 방법 찾아야함
     private String password;
     private String nick;
     private String birth;
