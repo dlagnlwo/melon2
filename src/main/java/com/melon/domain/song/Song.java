@@ -5,6 +5,7 @@ import javax.persistence.*;
 import com.melon.domain.album.Album;
 import com.melon.domain.artist.Artist;
 import com.melon.domain.genre.Genre;
+import com.melon.domain.like.UserLike;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +28,16 @@ public class Song {
     private byte[] songFile;
     private String playTime;
     private String lyrics;
+    private int playCount;
+    private int songLike;
+
+    @OneToOne
+    @JoinColumn(name = "likeCnt")
+    private UserLike userLike;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "genreId")
+    private Genre genre;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "albumId")
@@ -36,7 +47,4 @@ public class Song {
     @JoinColumn(name = "artistId")
     private Artist artist;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "genreId")
-    private Genre genre;
 }

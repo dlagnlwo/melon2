@@ -14,7 +14,6 @@ import java.util.List;
 @Table(name = "genre")
 public class Genre {
     @Id
-    @Getter @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int genreId;
     private String genreName;

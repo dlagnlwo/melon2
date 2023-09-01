@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
 
+import com.melon.domain.like.UserLike;
+
 // 가수 테이블
 @Entity
 @Setter @Getter
@@ -18,4 +20,9 @@ public class Artist {
     @Column(name = "artist_group")
     private String artistGroup; // SQL 예약어로 인해 group을 사용할 수 없음 테이블명 변경필
     private String artistPro;
+    private int artistLike;
+
+    @OneToOne
+    @JoinColumn(name = "likeCnt")
+    private UserLike userLike;
 }

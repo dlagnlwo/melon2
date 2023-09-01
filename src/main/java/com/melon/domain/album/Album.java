@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import com.melon.domain.like.UserLike;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,4 +25,10 @@ public class Album {
     private byte[] albumImg;
     private String albumType;
     private String albumName;
+    private int albumLike;
+
+    @OneToOne
+    @JoinColumn(name = "likeCnt")
+    private UserLike userLike;
+
 }

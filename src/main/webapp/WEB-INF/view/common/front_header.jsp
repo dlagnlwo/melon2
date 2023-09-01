@@ -1,3 +1,4 @@
+<%@ page contentType = "text/html; charset=utf-8" %>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <head>
     <meta charset="UTF-8">

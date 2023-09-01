@@ -1,9 +1,15 @@
-package com.melon.domain;
+package com.melon.domain.like;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import com.melon.domain.album.Album;
+import com.melon.domain.artist.Artist;
+import com.melon.domain.member.Member;
+import com.melon.domain.song.Song;
+
 import java.util.ArrayList;
 import java.util.List;
 
