@@ -15,7 +15,7 @@
 <section class="sec1">
     <%@ include file="/WEB-INF/view/common/aside.jsp" %>
     <div class="wrap">
-        <!-- ❤️여기서 만들자❤️️ -->
+        <!-- ❤️여기서 만들자❤️️ --> 
     </div>
 </section>
 </body>
