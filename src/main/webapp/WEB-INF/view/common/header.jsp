@@ -2,15 +2,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header class="header">
     <div class="header_left">
-        <a href="">Melon</a>
+<%--        <a href="">Melon</a>--%>
+        <a href="/">Melon</a>
         <form method="post">
             <div class="header_left_read"><i class="fa-solid fa-magnifying-glass"></i></div>
             <input type="text" name="">
         </form>
     </div>
     <div class="header_right">
-        <form><button>로그인</button></form>
-        <form><button>회원가입</button></form>
+        <form action="/login" method="GET"><button>로그인</button></form>
+        <form action="/join" method="GET"><button>회원가입</button></form>
     </div>
     <aside class="aside">
         <div class="playsong_info">
