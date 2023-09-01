@@ -1,4 +1,5 @@
 # 배포 환경
+<<<<<<< HEAD
 Java 17
 SpringBoot 2.7.14
 gradle
@@ -21,3 +22,9 @@ HTML5, CSS3
 팀원 서지환 : 관리자 페이지, 고객센터 페이지, 회원 관리 페이지
 
 팀원 임휘재 : 앨범 페이지, 가수 페이지
+=======
+
+# 기술 스택
+
+# 요구 사항
+>>>>>>> branch 'main' of https://github.com/yeosuhan/melon.git
