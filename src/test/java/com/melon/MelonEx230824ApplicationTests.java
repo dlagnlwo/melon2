@@ -9,5 +9,4 @@ class MelonEx230824ApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
