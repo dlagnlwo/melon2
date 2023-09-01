@@ -1,8 +1,5 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
-<<<<<<< HEAD
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-=======
->>>>>>> branch 'main' of https://github.com/yeosuhan/melon.git
 <aside class="nav">
     <img src="<%=request.getContextPath()%>/resources/Img/melon_icon.png">
     <ul>
