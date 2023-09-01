@@ -1,3 +1,5 @@
+<%@ page contentType = "text/html; charset=utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <aside class="nav">
     <img src="<%=request.getContextPath()%>/resources/Img/melon_icon.png">
     <ul>

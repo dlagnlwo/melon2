@@ -1,3 +1,5 @@
+<%@ page contentType = "text/html; charset=utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header class="header">
     <div class="header_left">
         <a href="">Melon</a>
