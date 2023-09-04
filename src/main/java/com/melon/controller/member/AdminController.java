@@ -10,4 +10,9 @@ public class AdminController {
     public String admin() {
         return "member/admin";
     }
+
+    @GetMapping("/song/add")
+    public String songAdd() {
+        return "song/songAdd";
+    }
 }
