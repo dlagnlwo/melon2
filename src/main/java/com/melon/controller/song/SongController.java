@@ -12,9 +12,26 @@ public class SongController {
 	* @author 여수한
 	*/
 	@GetMapping("/popular")
-	public String getChart() {
+	public String getPopularChart() {
 		
 		return "song/popularcharts";
 	}
-	
+	/**
+	* 최신노래 조회
+	* @author 여수한
+	*/
+	@GetMapping("/recente/song")
+	public String getRecenteSong() {
+		
+		return "song/recentesong";
+	}
+	/**
+	* 최신앨범 조회
+	* @author 여수한
+	*/
+	@GetMapping("/recente/album")
+	public String getRecenteAlbum() {
+		
+		return "song/recentealbum";
+	}
 }

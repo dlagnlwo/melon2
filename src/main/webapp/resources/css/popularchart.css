@@ -17,9 +17,6 @@
 .wrap .chart-table .charts {
 	width:100%;
 }
-.wrap .chart-table .charts td {
-	border: 0px solid red;
-}
 .wrap .chart-table .charts thead td {
 	height:50px;
 	vertical-align: middle;
@@ -37,7 +34,6 @@
 	width:70px;
 }
 .wrap .chart-table .charts td:nth-child(3){
-	border:1px solid red;
 	width:70px;
 	text-align:center;
 }
