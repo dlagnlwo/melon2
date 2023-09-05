@@ -19,29 +19,103 @@
      	  	</div>
      	  	<div id="dropdown-title">
 	     	  	<div class="dropdown-content" id="myDropdown">
-		            <a href="#">옵션 1</a>
-		            <a href="#">옵션 2</a>
-		            <a href="#">옵션 3</a>
-		            <a href="#">옵션 1</a>
-		            <a href="#">옵션 2</a>
-		            <a href="#">옵션 3</a>
-		            <a href="#">옵션 1</a>
-		            <a href="#">옵션 2</a>
-		            <a href="#">옵션 3</a>
+		            <a href="#">장르 홈</a>
+		            
+		            <a href="#">발라드</a>
+		            <a href="#">댄스</a>
+		            <a href="#">국내힙합</a>
+		            <a href="#">아이돌</a>
+		            <a href="#">국내 R&B</a>
+		            <a href="#">OST</a>
+		            <a href="#">해외</a>
 		        </div>
      	  	</div> 
+     	  	<div class="era">
+     	  		<p class="all">전체</p>
+     	  		<p class="_20">20's</p>
+     	  		<p class="_10">10's</p>
+     	  		<p class="_00">00's</p>
+     	  		<p class="_90">90's</p>
+     	  		<p class="_80">80's</p>
+     	  	</div>
    		</div>
    		<div class="favorites">
    			<!-- 즐겨찾기 -->
-   			<ul>
-   				<li class="ballade" style="color:#1fc561; border:1px solid #1fc561">발라드</li>
-   				<li class="dance" style="color:#1fbcc5; border:1px solid #1fbcc5">댄스</li>
-   				<li class="hiphop" style="color:#875cc9; border:1px solid #875cc9">국내힙합</li>
-   				<li class="idol" style="color:#fd6a6a; border:1px solid #fd6a6a">아이돌</li>
-   				<li class="r&b" style="color:#DB3D23; border:1px solid #DB3D23">국내R&B</li>
-   				<li class="indie" style="color:#886fe5; border:1px solid #886fe5">OST</li>
-   				<li class="indie" style="color:#19d7a4; border:1px solid #19d7a4">해외</li>
+   			<ul class="showline">
+   				<li class="myballade">발라드</li>
+   				<li class="mydance">댄스</li>
+   				<li class="myhiphop">국내힙합</li>
+   				<li class="myidol">아이돌</li>
+   				<li class="myrnb">국내R&B</li>
+   				<li class="myost">OST</li>
+   				<li class="myforeign">해외</li>
    			</ul>
+   		</div>
+   		<div class="favorite-menu">
+	   		<div>
+	   			<ul>
+	   				<li class="ballade">발라드 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="dance">댄스 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="hiphop">국내힙합 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="idol">아이돌 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="rnb">국내R&B <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="indie">OST <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="indie">해외 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   			</ul>
+   			</div>
+   		</div>
+   		<div class="menu-toggle">
+   			<i class="fa-solid fa-chevron-down" id="favoritedown"></i>
+   			<i class="fa-solid fa-chevron-up" id="favoriteup"></i>
+   		</div>
+   		<div class="genre_album">
+   		<p>홈에 뭐넣지..?</p>
+   			<ul>
+				<li>
+					<a href="#"> 
+						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
+							>
+					</a>
+					<div>
+						<p class="alnum">NewJeans 1st EP 'New Jeans'</p>
+						<p class="artist">NewJeans</p>
+						<p class="release">2022.08.01</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"> 
+						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
+							>
+					</a>
+					<div>
+						<p class="alnum">NewJeans 1st EP 'New Jeans'</p>
+						<p class="artist">NewJeans</p>
+						<p class="release">2022.08.01</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"> 
+						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
+							>
+					</a>
+					<div>
+						<p class="alnum">NewJeans 1st EP 'New Jeans'</p>
+						<p class="artist">NewJeans</p>
+						<p class="release">2022.08.01</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"> 
+						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
+							>
+					</a>
+					<div>
+						<p class="alnum">NewJeans 1st EP 'New Jeans'</p>
+						<p class="artist">NewJeans</p>
+						<p class="release">2022.08.01</p>
+					</div>
+				</li>
+			</ul>
    		</div>
     </div>
 </section>
