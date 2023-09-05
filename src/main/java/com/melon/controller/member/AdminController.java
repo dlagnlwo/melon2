@@ -15,4 +15,19 @@ public class AdminController {
     public String songAdd() {
         return "song/songAdd";
     }
+
+    @GetMapping("/album/add")
+    public String albumAdd() {
+        return "album/albumAdd";
+    }
+
+    @GetMapping("/artist/add")
+    public String artistAdd() {
+        return "artist/artistAdd";
+    }
+
+    @GetMapping("/admin/member")
+    public String adminMember() {
+        return "member/admin_member";
+    }
 }

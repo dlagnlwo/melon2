@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="kor">
 <%@ include file="/WEB-INF/view/common/front_header.jsp" %>
-<link href="<%=request.getContextPath()%>/resources/css/songAdd.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/resources/css/artist/artistAdd.css" rel="stylesheet">
 
 <body>
 <%@ include file="/WEB-INF/view/common/header.jsp" %>
@@ -12,22 +12,21 @@
     <div class="wrap">
 
         <div class="song_button">
-            <div class="song_add_title"><p>노래 추가</p></div>
+            <div class="song_add_title"><p>가수 추가</p></div>
             <a href="/admin"><button>뒤로가기</button></a>
             <form action="" method="post" class="data_form">
                 <label>가수이름</label>
                 <input type="text" size="30px" placeholder="가수이름">
-                <label>앨범명</label>
-                <input type="text" size="30px" placeholder="앨범명">
-                <label>노래제목</label>
-                <input type="text" size="30px" placeholder="노래제목">
-                <label>재생시간</label>
-                <input type="text" size="30px" placeholder="재생시간">
-                <label for="songFile">노래 파일선택</label>
-                <input type="file" id="songFile">
-                <p>노래가사</p>
+                <label>데뷔</label>
+                <input type="text" size="30px" placeholder="데뷔">
+                <label>소속사</label>
+                <input type="text" size="30px" placeholder="소속사">
+                <label>그룹명</label>
+                <input type="text" size="30px" placeholder="그룹명">
+                <p>가수소개</p>
                 <textarea cols="50" rows="12"></textarea>
                 <div><input type="submit"></div>
+
             </form>
         </div>
     </div>
