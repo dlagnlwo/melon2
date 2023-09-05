@@ -2,23 +2,23 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header class="header">
     <div class="header_left">
-        <a href="">Melon</a>
-        <form method="post">
+        <a href="/">Melon</a>
+        <form action="/search" method="post">
             <div class="header_left_read"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <input type="text" name="">
+            <input type="text" name="result">
         </form>
     </div>
     <div class="header_right">
-        <form><button>로그인</button></form>
-        <form><button>회원가입</button></form>
+        <form action="/login" method="GET"><button>로그인</button></form>
+        <form action="/join" method="GET"><button>회원가입</button></form>
     </div>
     <aside class="aside">
         <div class="playsong_info">
-            <img src="<%=request.getContextPath()%>/resources/Img/album.png">
-            <p>Vancouver</p>
-            <p><span>BIG Naughty (서동현)</span></p>
+            <img src="<%=request.getContextPath()%>/resources/Img/next_level_img.png">
+            <p>Next Level</p>
+            <p><span>aespa</span></p>
             <p id="like_btn"><a href="#" class="white"><strong>♥</strong></a></p>
-            <p>00:00 | 03:34</p>
+            <p>00:00 | 04:15</p>
             <div class="playsong_oper">
                 <div class="playsong_oper_wrap">
                     <a href=""><i class="fa-solid fa-play"></i></a>
@@ -37,6 +37,22 @@
             <ul>
                 <li class="playsong_list_wrap">
                     <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/next_level_img.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Next Level</p>
+                        <p>aespa</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
                     <img src="<%=request.getContextPath()%>/resources/Img/album.png">
                     <div class="playsong_list_wrap_div">
                         <p>Vancouver</p>
@@ -51,6 +67,183 @@
                         <p>NewJeans</p>
                     </div>
                 </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype boy</p>
+                        <p>NewJeans</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Vancouver</p>
+                        <p>BIG Naughty (서동현)</p>
+                    </div>
+                </li>
+                <li class="playsong_list_wrap">
+                    <input type="checkbox">
+                    <img src="<%=request.getContextPath()%>/resources/Img/album2.png">
+                    <div class="playsong_list_wrap_div">
+                        <p>Hype ascascasc</p>
+                        <p>NewJeansascascasc</p>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </aside>

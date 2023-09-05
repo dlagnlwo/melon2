@@ -19,7 +19,7 @@ a,a:active,a:visited,a:hover{text-decoration: none;}
 body{background-color: #2a2a2a; font-family: 'SUIT-Regular';}
 input[type="checkbox"]:hover{cursor: pointer;}
 
-.header{position: relative; display: flex; height: 65px;}
+.header{position: relative; display: flex; height: 65px; width: calc(100% - 350px);}
 .header>.header_left>a{font-size: 1.2rem; color:#04E632; margin: 20px; font-family: 'KCC-Ganpan'; height: 23px; line-height: 23px;}
 .header_left{position: relative; display: flex; width: 50%;}
 .header_left input{margin: 20px; background-color: #3b3b3b; border-radius: 16px; width: 150px; height: 23px; border:none; padding: 0 10px 0 30px; color: #fff; font-size: 0.8rem;}
@@ -34,11 +34,12 @@ input[type="checkbox"]:hover{cursor: pointer;}
 .header_right form:nth-child(1) button:last-child{margin: 20px 10px 20px 5px;}
 .header_right form:nth-child(2) button:last-child{margin: 20px 20px 20px 5px;}
 
-.aside{position: relative; width: 350px; min-width: 350px; height: 1000px; display: flex; flex-wrap: wrap; align-items: flex-start; text-align: center; background: #333; color: #fff; z-index: 2;}
+.aside{position: fixed; right: 0; width: 350px; min-width: 350px; height: 940px; display: flex; flex-wrap: wrap; align-items: flex-start; text-align: center; background: #333; color: #fff; z-index: 2;}
 .playsong_info{display: flex; flex-wrap: wrap; justify-content: center; margin: 0 auto; align-items: flex-start; height: 350px;}
 .playsong_info img{width: 150px; height: 150px; margin: 50px 0 20px 0; border-radius: 6px;}
-.playsong_info p{width: 100%; height: 20px; font-size: 0.8rem; font-weight: 600;}
+.playsong_info p{width: 100%; height: 20px; line-height: 20px; font-size: 0.8rem; font-weight: 600;}
 .playsong_info span{color:#04E632}
+#like_btn{height: 30px; line-height: 30px;}
 #like_btn .white{font-size: 1.1rem; font-weight: 300; color: #fff;}
 #like_btn .green{font-size: 1.1rem; font-weight: 300; color: #04E632 !important;}
 
@@ -55,7 +56,7 @@ input[type="checkbox"]:hover{cursor: pointer;}
 .playsong_oper_wrap a:hover{color: #04E632;}
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 .playsong_list::-webkit-scrollbar{display: none;}
-.playsong_list{width: 100%; height: 530px; overflow: scroll;}
+.playsong_list{width: 100%; height: 500px; overflow: scroll;}
 
 .playsong_list_wrap{display: flex; width: 100%; justify-content: flex-start; margin: 0 0 10px 0; text-align: left;}
 .playsong_list_wrap input[type="checkbox"]{width: 13px; height: 13px; appearance: none; border:1px solid #aaa; border-radius: 4px; margin: 11px 11px 0;}
