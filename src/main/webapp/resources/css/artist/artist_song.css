@@ -1,0 +1,194 @@
+.container {
+    border: 0px solid white; height: 1100px;
+}
+a {
+    text-decoration: none; color: inherit; /* 기본 텍스트 색상 상속 */
+}
+/*앨범사진과 앨범정보들이 보이는 상단*/
+.artist_top {
+    border: 0px solid white; width: 1393px; height: 250px; display: flex;
+    position: relative; margin-left: auto; margin-right: auto;
+}
+/*앨범 사진 부분*/
+.artist_top_img {
+    border: 0px solid white; width: 250px; display: flex; align-items: center;
+}
+.artist_img {
+    border: 0px solid red; width: 200px; height: 190px; border-radius: 10px;
+}
+.artist_img img {
+    width: 200px; border-radius: 100px;
+}
+
+/*앨범 정보 부분*/
+.artist_top_text {
+    border: 0px solid white; width: 1193px; height: 250px; color: #999999;
+    position: relative;
+}
+.artist_top_text > .artist_top_text_box {
+    border: 0px solid white; width: 600px; height: 250px; line-height: 60px;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_name {
+    border: 0px solid white; font-size: 1.5rem; height: 80px; line-height: 120px;
+    color: white; font-weight: 10; width: 100px;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play {
+    border: 0px solid white; height: 40px; line-height: 40px; display: inline-block;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart{
+    display: inline-block;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_count{
+    display: inline-block; font-size: 1.0rem;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .play_btn{
+    display: inline-block; margin-left: 40px;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .rep_song{
+    display: inline-block; margin-left: 10px;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_agency {
+    border: 0px solid white; height: 40px; line-height: 40px;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_agency > .agency{
+    display: inline-block; border: 0px solid white;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_agency > .agency_name{
+    display: inline-block; margin-left: 27px;
+}
+
+/*메뉴들이 있는 부분*/
+.artist_menu {
+    border: 0px solid white; width: 1393px; height: 70px; display: flex; justify-content: space-between;
+    border-bottom: 1px solid #999999; margin-left: auto; margin-right: auto;
+}
+/*수록곡, 앨범상세, 댓글 메뉴버튼 ajax로 구현하기*/
+.artist_menu_left {
+    border: 0px solid red; width: 300px; height: 70px; display: flex; justify-content: space-around; text-align: center;
+    color: white; line-height: 70px; font-size: 1.2rem;
+}
+.artist_menu_left > .artist_left_song {
+    border: 0px solid white; width: 90px; height: 70px; color: #04E632;
+}
+.artist_menu_left > .artist_left_detail {
+    border: 0px solid white; width: 100px; height: 70px;
+}
+.artist_menu_left > .artist_left_comment {
+    border: 0px solid white; width: 100px; height: 70px;
+}
+
+/*가수 곡 정렬*/
+.artist_sort_and_play {
+    border: 0px solid white; width: 97%; height: 70px; color: white;
+    display: flex; justify-content: space-between; border-bottom: 1px solid #999999;
+    margin-left: auto; margin-right: auto;
+}
+.artist_sort_and_play > .artist_song_sort_box {
+    border: 0px solid white; width: 50%; height: 70px; display: flex;
+    justify-content: flex-start;
+}
+.artist_sort_and_play > .artist_song_sort_box > .artist_song_latest_box {
+    border: 0px solid white; width: 80px; height: 70px;
+    display: flex; justify-content: center; align-items: center;
+}
+.artist_song_latest_box > .artist_song_latest_text {
+    color: #04E632; cursor: pointer; text-decoration : underline;
+}
+.artist_song_popularity_box > .artist_song_popularity_text {
+    cursor: pointer;
+}
+.artist_song_alphabetically_box > .artist_song_alphabetically_text {
+    cursor: pointer;
+}
+.artist_sort_and_play > .artist_song_sort_box > .artist_song_popularity_box {
+    border: 0px solid white; width: 80px; height: 70px;
+    display: flex; justify-content: center; align-items: center;
+}
+.artist_sort_and_play > .artist_song_sort_box > .artist_song_alphabetically_box {
+    border: 0px solid white; width: 80px; height: 70px;
+    display: flex; justify-content: center; align-items: center;
+}
+.artist_sort_and_play > .artist_select_and_play {
+    border: 0px solid white; width: 50%; height: 70px; display: flex;
+    justify-content: flex-end;
+}
+/*전체선택, 전체재생부분*/
+.artist_menu_right {
+    border: 0px solid blue; width: 300px; height: 70px; display: flex; color: white; font-size: 0.8rem;
+    justify-content: center; text-align: center; position: relative;
+}
+.artist_menu_right > .artist_right_select {
+    border: 0px solid red; width: 90px;
+}
+.artist_right_select_btn, .artist_right_select_play {
+    border: 1px solid #999999; position: absolute; top: 20px; width: 26%; height: 30px;
+    line-height: 30px; border-radius: 70px; color: white;
+}
+/*전체선택 hover*/ /*전체재생 hover*/
+.artist_right_select_btn:hover, .artist_right_select_play:hover {
+    color:#04E632; transition: 0.2s all;
+}
+
+/*테이블 부분*/
+table.song_tb {
+    border: 0px solid red; width: 97%; max-height: 616px; position: relative;
+    color: white; overflow-y: auto; margin-left: auto; margin-right: auto;
+}
+.head_th {
+    border: 0px solid white; height: 60px; line-height: 60px; text-align: center;
+}
+.head_th tr {
+    border-bottom: 1px solid #999999; text-align: left;
+}
+.head_th tr th:nth-child(1) {
+    text-align: center;
+}
+.head_th tr th:nth-child(6) {
+    text-align: center;
+}
+.body_tb {
+    border: 0px solid white; height: 70px;  text-align: center;
+}
+.body_tb tr {
+    border: 0px solid white; border-bottom: 1px solid #999999;
+}
+.body_tb tr td {
+    height: 60px; vertical-align: middle;
+}
+.body_tb .artist_song_name_box_tb {
+    display: flex; justify-content: flex-start; align-items: center;
+    border: 0px solid white; width: 100%; height: 60px;
+}
+.body_tb .artist_song_name_box_tb > .artist_album_pic {
+    display: flex; justify-content: center; align-items: center;
+    margin-right: 20px;
+}
+.artist_album_pic img {
+    width: 50px; border-radius: 10px;
+}
+.body_tb td:nth-child(1){
+    border: 0px solid white; width: 5%; min-width: 30px;
+}
+.body_tb td:nth-child(2){
+    border: 0px solid white; width: 34%; min-width: 300px;
+}
+.body_tb td:nth-child(3){
+    border: 0px solid white; width: 16%; text-align: left; min-width: 150px;
+}
+.body_tb td:nth-child(4){
+    border: 0px solid white; width: 32%; text-align: left; min-width: 300px;
+}
+.body_tb td:nth-child(5){
+    border: 0px solid white; width: 8%; text-align: left; min-width: 100px;
+}
+.body_tb td:nth-child(6){
+    border: 0px solid white; width: 5%; min-width: 75px;
+}
+.body_tb .artist_name_tb {
+    font-size: 0.9rem; height: 30px; line-height: 30px;
+}
+
+@media(max-width: 1180px){
+    .artist_sort_and_play{width: 650px;}
+    .song_tb{width: 500px;}
+}
