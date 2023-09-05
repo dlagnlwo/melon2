@@ -113,12 +113,14 @@ a {
     border: 0px solid white; width: 50%; height: 70px; display: flex;
     justify-content: flex-end;
 }
+
+/*가수 - 앨범리스트*/
 .artist_album {
-    border: 0px solid white; width: 1300px; height: 800px; overflow-y: auto;
+    border: 0px solid white; width: 1350px; height: 800px; overflow-y: auto;
     margin-left: auto; margin-right: auto; margin-top: 30px;
 }
 .artist_album > .artist_album_list {
-    border: 0px solid white; width: 1300px; height: 330px;
+    border: 0px solid white; width: 1350px; height: 330px;
     display: flex; justify-content: space-around; color: white;
 }
 .artist_album > .artist_album_list > .artist_album_list_box {

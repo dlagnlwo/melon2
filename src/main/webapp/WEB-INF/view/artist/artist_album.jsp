@@ -39,12 +39,12 @@
                 <div class="artist_menu_left">
                     <div class="artist_left_song">
                         <div class="artist_left_song_text">
-                            <a href=#>곡</a>
+                            <a href=/artist>곡</a>
                         </div>
                     </div>
                     <div class="artist_left_detail">
                         <div class="artist_left_detail_text">
-                            <a href="/artist/album">앨범</a>
+                            <a href="#">앨범</a>
                         </div>
                     </div>
                     <div class="artist_left_comment">
@@ -125,7 +125,7 @@
                     </div>
                     <div class="artist_album_list_box">
                         <div class="artist_album_list_img">
-                            <img src="/resources/Img/OMG.jpg"/>
+                            <img src="/resources/Img/Love_Lee.jpg"/>
                         </div>
                         <div class="artist_album_text_box">
                             <p>Next Level</p>

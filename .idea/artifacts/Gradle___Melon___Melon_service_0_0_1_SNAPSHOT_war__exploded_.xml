@@ -19,12 +19,15 @@
           <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-devtools:2.7.14" />
           <element id="library" level="project" name="Gradle: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1" />
           <element id="library" level="project" name="Gradle: com.h2database:h2:2.1.214" />
           <element id="library" level="project" name="Gradle: jstl:jstl:1.2" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-jasper:9.0.58" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.3.29" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.3.29" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.7.14" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.7.14" />
           <element id="library" level="project" name="Gradle: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.3.1" />
           <element id="library" level="project" name="Gradle: org.mybatis:mybatis:3.5.13" />
           <element id="library" level="project" name="Gradle: org.mybatis:mybatis-spring:2.1.1" />
@@ -40,8 +43,6 @@
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.5" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.5" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.5" />
-          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.7.14" />
-          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.7.14" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.3.29" />
           <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.30" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.3.29" />
@@ -74,7 +75,6 @@
           <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.17.2" />
           <element id="library" level="project" name="Gradle: org.mariadb.jdbc:mariadb-java-client:3.0.10" />
           <element id="library" level="project" name="Gradle: com.sun.activation:jakarta.activation:1.2.2" />
-          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-devtools:2.7.14" />
         </element>
       </element>
     </root>

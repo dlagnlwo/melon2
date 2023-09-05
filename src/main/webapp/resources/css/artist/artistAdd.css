@@ -11,7 +11,6 @@ input,button{border: none;}
     float: right;
     padding-right: 40px;
 }
-
 .song_button a button {
     border-radius: 5px;
     background: none;
@@ -25,8 +24,11 @@ input,button{border: none;}
 .song_button a button:hover {
     background: #04E632;
     color: #ffffff;
-    cursor: pointer;
-
+}
+.song_button .button_form {
+    display: inline-block;
+    float: right;
+    margin: 10px;
 }
 
 .song_button .data_form {
@@ -66,11 +68,8 @@ input,button{border: none;}
     border-radius: 5px;
 }
 
-input[type="file"]{border:none !important;}
-
 .song_button form div input:hover {
     background: #04E632;
     color: #ffffff;
-    cursor: pointer;
 
 }
