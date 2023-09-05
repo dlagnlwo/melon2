@@ -21,7 +21,9 @@
                 <input type="text" size="30px" placeholder="노래제목">
                 <input type="text" size="30px" placeholder="재생시간">
                 <input type="text" size="30px" placeholder="노래파일">
-                <input type="text" size="30px" placeholder="노래가사">
+<%--                <input type="text" size="30px" placeholder="노래가사">--%>
+                <p>노래가사</p>
+                <textarea name="" id="" cols="50" rows="12"></textarea>
             </form>
         </div>
     </div>

@@ -21,3 +21,9 @@ input,button{border: none;}
     background: none;
     color: #ffffff;
 }
+.song_button form p {
+    color: gray;
+}
+.song_button form textarea {
+    background: #a9a9a9;
+}
