@@ -1,11 +1,32 @@
-botton{}
+.search_body table tbody th {
+    color: #ffffff;
+}
+.search_body div {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.search_body a {
+    float: right;
+    padding-right: 50px;
+}
 
-.wrap{margin-bottom: 100px;}
+.search_body a button{
+    border-radius: 5px;
+    background: none;
+    border: 2px solid #4c4c4c;
+    color: #ffffff;
+}
+.search_body a button:hover {
+    background: #04E632;
+    cursor: pointer;
+}
 
-.search_header{border-bottom: 1px solid #4c4c4c; width: 1000px;  height: 104px; display: flex; align-items: center;}
-.search_header h2{font-size: 1.9rem; color: #fff; }
-.search_header ul{position: relative; display: flex; width: 450px; justify-content: space-between;}
-.search_header button{border: none; background: none; font-size: 1rem; font-family: SUIT-Regular; color: #fff; line-height: 30px; height: 30px; cursor: pointer;}
+.search_body form {
+    display: inline-block;
+    margin-left: 180px;
+}
 
 .search_body p{color:#fff; font-size: 1.1rem; line-height: 80px; height: 80px;}
 .search_body table {position: relative; width: 100%;}
