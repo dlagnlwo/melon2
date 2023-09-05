@@ -72,73 +72,8 @@ a {
     border: 0px solid white; width: 90px; height: 70px;
 }
 .artist_menu_left > .artist_left_detail {
-    border: 0px solid white; width: 100px; height: 70px; color: #04E632;
-}
-.artist_menu_left > .artist_left_comment {
     border: 0px solid white; width: 100px; height: 70px;
 }
-
-/*가수 곡 정렬*/
-.artist_sort_and_play {
-    border: 0px solid white; width: 97%; height: 70px; color: white;
-    display: flex; justify-content: space-between; border-bottom: 1px solid #999999;
-    margin-left: auto; margin-right: auto;
-}
-.artist_sort_and_play > .artist_song_sort_box {
-    border: 0px solid white; width: 50%; height: 70px; display: flex;
-    justify-content: flex-start; min-width: 500px;
-}
-.artist_sort_and_play > .artist_song_sort_box > .artist_song_latest_box {
-    border: 0px solid white; width: 80px; height: 70px;
-    display: flex; justify-content: center; align-items: center;
-}
-.artist_song_latest_box > .artist_song_latest_text {
-    color: #04E632; cursor: pointer; text-decoration : underline;
-}
-.artist_song_popularity_box > .artist_song_popularity_text {
-    cursor: pointer;
-}
-.artist_song_alphabetically_box > .artist_song_alphabetically_text {
-    cursor: pointer;
-}
-.artist_sort_and_play > .artist_song_sort_box > .artist_song_popularity_box {
-    border: 0px solid white; width: 80px; height: 70px;
-    display: flex; justify-content: center; align-items: center;
-}
-.artist_sort_and_play > .artist_song_sort_box > .artist_song_alphabetically_box {
-    border: 0px solid white; width: 80px; height: 70px;
-    display: flex; justify-content: center; align-items: center;
-}
-.artist_sort_and_play > .artist_select_and_play {
-    border: 0px solid white; width: 50%; height: 70px; display: flex;
-    justify-content: flex-end;
-}
-
-/*가수 - 앨범리스트*/
-.artist_album {
-    border: 0px solid white; width: 1300px; height: 800px; overflow-y: auto;
-    margin-left: auto; margin-right: auto; margin-top: 30px;
-}
-.artist_album > .artist_album_list {
-    border: 0px solid white; width: 1300px; height: 330px;
-    display: flex; justify-content: space-around; color: white;
-}
-.artist_album > .artist_album_list > .artist_album_list_box {
-    border: 0px solid white; width: 200px; height: 330px;
-}
-.artist_album > .artist_album_list > .artist_album_list_box > .artist_album_list_img{
-    border: 0px solid white; width: 200px; height: 200px;
-    border-radius: 10px;
-}
-.artist_album_list_img img {
-    width: 200px; border-radius: 10px;
-}
-.artist_album > .artist_album_list > .artist_album_list_box > .artist_album_text_box{
-    border: 0px solid white; width: 100px; height: 100px;
-}
-.artist_album_text_box p{
-    border: 0px solid white; width: 100px; height: 30px; line-height: 30px;
-}
-.artist_album_text_box p:nth-child(1){
-    font-size: 1.2rem; line-height: 40px;
+.artist_menu_left > .artist_left_comment {
+    border: 0px solid white; width: 100px; height: 70px; color: #04E632;
 }
