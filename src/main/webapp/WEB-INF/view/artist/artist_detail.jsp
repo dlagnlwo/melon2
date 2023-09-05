@@ -54,6 +54,48 @@
                     </div>
                 </div>
             </div>
+            <div class="artist_info_body">
+                <div class="artist_info_text_box">
+                    <div class="artist_info_text">
+                        <div class="artist_activity_info"><p>활동정보</p></div>
+                        <div class="artist_debut">
+                            <p>데뷔</p>
+                            <p>2023.09.01</p>
+                        </div>
+                        <div class="artist_recent_song">
+                            <div class="artist_recent_song_text">
+                                <p>최근곡</p>
+                            </div>
+                            <div class="artist_album">
+                                <p><i class="fa-solid fa-play"></i></p>
+                                <img src="/resources/Img/Love_Lee.jpg"/>
+                            </div>
+                            <div class="artist_song_name">
+                                <p>Love Lee</p>
+                                <p>악동뮤지션</p>
+                            </div>
+                        </div>
+                        <div class="artist_type">
+                            <p>유형</p>
+                            <p>여성/그룹</p>
+                        </div>
+                        <div class="artist_group">
+                            <p>소속그룹</p>
+                            <p>aespa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist_pro_box">
+                    <div class="artist_pro_text_box">
+                        <p>아티스트 소개</p>
+                    </div>
+                    <div class="artist_pro_content_box">
+                        <div class="artist_pro_content">
+                            <p>아티스트 내용 ~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

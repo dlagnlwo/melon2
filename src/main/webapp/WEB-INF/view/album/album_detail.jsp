@@ -89,17 +89,4 @@
     </div>
 </section>
 </body>
-<script>
-    // $(document).ready(function() {
-    //     let originalColor = $(".album_left_detail_text").css("color");
-    //
-    //     $(".album_left_detail_text").click(function() {
-    //         if ($(this).css("color") === originalColor) {
-    //             $(this).css("color", "#04E632");
-    //         } else {
-    //             $(this).css("color", originalColor);
-    //         }
-    //     });
-    // });
-</script>
 </html>
