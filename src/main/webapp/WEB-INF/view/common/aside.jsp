@@ -13,7 +13,7 @@
             </ul>
         </li>
         <li><a href="">장르음악</a></li>
-        <li><a href="">Q&A</a></li>
+        <li><a href="qna">Q&A</a></li>
         <li>
             <a href="#">마이뮤직</a>
             <ul>

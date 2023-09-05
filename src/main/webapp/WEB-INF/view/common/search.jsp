@@ -4,6 +4,7 @@
 <html lang="kor">
 <%@ include file="/WEB-INF/view/common/front_header.jsp" %>
 <link href="<%=request.getContextPath()%>/resources/css/search.css" rel="stylesheet">
+<script src="<%=request.getContextPath()%>/resources/js/search.js"></script>
 <body>
 <%@ include file="/WEB-INF/view/common/header.jsp" %>
 <section class="sec1">
@@ -11,15 +12,15 @@
     <div class="wrap">
 <%--        <%String result = request.getParameter("result");%>--%>
 <%--        <h2>검색 결과 : <%= result%></h2>--%>
+    <!-- type=button : URI를 연결하지 않고 단순하게 사용자 인터페이스만를 ‘조작‘하기 위한 버튼 -->
+    <!-- onsubmit="return false" 위와 같음 -->
         <div class="search_header">
             <ul>
                 <li><h2>검색</h2></li>
-                <li><p>통합검색</p></li>
-                <li><p>곡</p></li>
-                <li style="display: flex;height: 82px;align-items: center;line-height: 70px;"><button type="button" id="albumpos" onsubmit="return false">앨범</button></li>
-                <!-- type=button : URI를 연결하지 않고 단순하게 사용자 인터페이스만를 ‘조작‘하기 위한 버튼 -->
-                <!-- onsubmit="return false" 위와 같음 -->
-                <li><p>아티스트</p></li>
+                <li><button><p>통합검색</p></button></li>
+                <li><button><p>곡</p></button></li>
+                <li><button><p>앨범</p></button></li>
+                <li><button><p>아티스트</p></button></li>
             </ul>
         </div>
         <div class="search_body">
@@ -155,7 +156,6 @@
                         <td><p>album</p></td>
                         <td><p>likes</p></td>
                     </tr>
-
                 </tbody>
             </table>
         </div>

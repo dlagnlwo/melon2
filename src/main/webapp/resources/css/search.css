@@ -1,9 +1,11 @@
+botton{}
+
 .wrap{margin-bottom: 100px;}
 
-.search_header{border-bottom: 1px solid #4c4c4c; width: 1000px;}
-.search_header h2{font-size: 1.9rem; color: #fff; line-height: 80px; }
-.search_header p{font-size: 1rem; color: #fff; line-height: 80px; }
-.search_header ul{position: relative; display: flex; width: 450px; height: 104px; justify-content: space-between;}
+.search_header{border-bottom: 1px solid #4c4c4c; width: 1000px;  height: 104px; display: flex; align-items: center;}
+.search_header h2{font-size: 1.9rem; color: #fff; }
+.search_header ul{position: relative; display: flex; width: 450px; justify-content: space-between;}
+.search_header button{border: none; background: none; font-size: 1rem; font-family: SUIT-Regular; color: #fff; line-height: 30px; height: 30px; cursor: pointer;}
 
 .search_body p{color:#fff; font-size: 1.1rem; line-height: 80px; height: 80px;}
 .search_body table {position: relative; width: 100%;}
