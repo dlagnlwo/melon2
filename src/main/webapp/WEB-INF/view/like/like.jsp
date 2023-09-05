@@ -37,18 +37,18 @@
 
         	<div class="head3">
 	        	<div class="box">
-	        		<p><a href="#"><i class="fa-solid fa-check"> 전체선택</i></a></p>
+	        		<p><a href="#"><i class="fa-solid fa-check"> 전체선택</i></a>
 	        	</div>
 	        	<div class="box">
 	        		<a href="#"><i class="fa-solid fa-play"> 전체재생</i></a>
 	        	</div>
 	        	<div class="box">
 	        		<a href="#"><i class="fa-solid fa-shuffle"> 셔플재생</i></a>
-	        	</div> 
+	        	</div>
         	</div>
        </div>
         
-        <div class=like_list_wrap">
+        <div class="like_list_wrap">
 			<table class=like_list>
 				<thead>
 					<tr>
