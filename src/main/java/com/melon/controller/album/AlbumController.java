@@ -14,7 +14,16 @@ public class AlbumController {
      */
     @GetMapping
     public String album_song(){
-        return "/album/album";
+        return "album/album";
     }
+	/**
+	* 최신앨범 조회
+	* @author 여수한
+	*/
+	@GetMapping("/recente")
+	public String getRecenteAlbum() {
+		
+		return "album/recente_album";
+	}
 
 }
