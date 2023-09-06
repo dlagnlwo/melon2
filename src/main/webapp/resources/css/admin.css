@@ -77,6 +77,7 @@
 }
 .second_section table {
     border-top: 1px solid #dfdcdc;
+    width: 100%;
 }
 .second_section .first_tr{
     height: 50px;
@@ -89,12 +90,10 @@
     /*border: 1px solid green;*/
     text-align: center;
 }
-.second_section table {
-    width: 100%;
-    /*border: 1px solid green;*/
-}
+
 .second_section table .second_tr {
     border-top: 1px solid #ffffff;
+    line-height: 50px;
 }
 .second_section table .second_tr td {
     vertical-align: middle;
@@ -104,17 +103,11 @@
 .second_section table .second_tr td:nth-child(1) {
     width: 50px;
 }
-.second_section table .second_tr td:nth-child(2) {
-    width: 90px;
-    /*border: 1px solid white;*/
-}
+
 .second_section table .second_tr td:nth-child(3) {
 
 }
 
-.second_section table .second_tr img {
-    width: 60%;
-    padding-top: 5px;
-}
+
 
 
