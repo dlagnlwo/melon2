@@ -5,38 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cc478a8-e533-4ead-94c8-90cd47bce535" name="Changes" comment="merge">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/like/like.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/like.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Melon_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Melon_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Melon_service.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Melon_service.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/like/LikeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/like/LikeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/playlistnow/PlaylistnowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/playlistnow/PlaylistnowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/playlistrecente/PlaylistrecenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/playlistrecente/PlaylistrecenteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/ticket/TicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/controller/ticket/TicketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/domain/artist/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/domain/artist/Artist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/melon/domain/genre/Genre.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/melon/domain/genre/Genre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AdminController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QnaController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TicketController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/melon/controller/like/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/melon/controller/like/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/melon/domain/artist/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/melon/domain/artist/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/melon/domain/genre/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/melon/domain/genre/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/common/aside.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/common/aside.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/like/likesong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/like/likesong.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/likesong.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/likesong.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/like.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +98,7 @@
       <updated>1693872362287</updated>
       <workItem from="1693872364686" duration="2495000" />
       <workItem from="1693874886236" duration="26583000" />
-      <workItem from="1693959169423" duration="8915000" />
+      <workItem from="1693959169423" duration="9936000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <option name="closed" value="true" />
