@@ -14,7 +14,7 @@ public class ArtistController {
      */
     @GetMapping
     public String artist_song(){
-        return "/artist/artist";
+        return "artist/artist";
     }
 
 }

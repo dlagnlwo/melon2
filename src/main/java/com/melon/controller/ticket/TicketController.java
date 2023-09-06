@@ -15,6 +15,12 @@ public class TicketController {
 	
 	@GetMapping("/sale")
 	public String ticket_sale() {
-		return "ticket/ticketsale";
+		return "ticket/ticket_sale";
 	}
+
+	@GetMapping
+	public String ticket() {
+		return "ticket/ticket";
+	}
+
 }
