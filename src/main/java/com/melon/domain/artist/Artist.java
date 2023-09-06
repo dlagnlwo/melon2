@@ -21,6 +21,8 @@ public class Artist {
     private String artistGroup; // SQL 예약어로 인해 group을 사용할 수 없음 테이블명 변경필
     private String artistPro;
     private int artistLike;
+    @Lob
+    private byte[] artistFile;
 
     @OneToOne
     @JoinColumn(name = "likeCnt")

@@ -15,6 +15,8 @@
             <div class="song_add_title"><p>앨범 추가</p></div>
             <a href="/admin"><button>뒤로가기</button></a>
             <form action="" method="post" class="data_form">
+                <label>가수이름</label>
+                <input type="text" size="30px" placeholder="가수이름">
                 <label>앨범명</label>
                 <input type="text" size="30px" placeholder="앨범명">
                 <label>발매일</label>

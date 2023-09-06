@@ -281,56 +281,58 @@
 </section>
 </body>
 <script>
-    //체크박스 전체선택
-    $(document).ready(function() {
-        // 전체 선택 체크박스를 클릭했을 때
-        $("#selectAll").click(function() {
-            // 전체 선택 체크박스의 상태를 가져옴
-            let isChecked = $(this).prop("checked");
 
-            // 모든 항목 체크박스의 상태를 전체 선택 체크박스에 맞게 설정
-            $(".itemCheckbox").prop("checked", isChecked);
-        });
-
-        // 개별 항목 체크박스 중 하나라도 선택 해제되면 전체 선택 체크박스도 선택 해제
-        $(".itemCheckbox").click(function() {
-            if (!$(this).prop("checked")) {
-                $("#selectAll").prop("checked", false);
-            }
-        });
-    });
-
+    // 곡 버튼 클릭 시 곡만 나오게 하는 기능
     function showTable() {
-        // 곡 버튼 클릭 시
         $(".song_tb").show();
         $(".artist_album").hide();
         $(".artist_info_body").hide();
     }
 
+    // 앨범 버튼 클릭 시 앨범만 나오게 하는 기능
     function showAlbum() {
-        // 앨범 버튼 클릭 시
         $(".song_tb").hide();
         $(".artist_album").show();
         $(".artist_info_body").hide();
     }
 
+    // 상세정보 버튼 클릭 시 상제정보만 나오게 하는 기능
     function showInfo() {
-        // 상세정보 버튼 클릭 시
         $(".song_tb").hide();
         $(".artist_album").hide();
         $(".artist_info_body").show();
     }
 
+    // 누를때마다 색깔이 변경되게 하고 최신순, 인기순, 가나다순을 누르면 곡이 보이게 하는 기능
     $(document).ready(function() {
         // 클릭한 요소를 초록색으로 변경
         $(".artist_song_latest_text, .artist_song_popularity_text, .artist_song_alphabetically_text").click(function() {
-            // 모든 요소의 색상을 하얀색으로 초기화
             $(".artist_song_latest_text, .artist_song_popularity_text, .artist_song_alphabetically_text").removeClass("sort");
-            // 클릭한 요소의 색상을 초록색으로 변경
             $(this).addClass("sort");
+            if ($(this).hasClass("artist_song_latest_text")) {
+                showTable();
+            } else if ($(this).hasClass("artist_song_popularity_text")) {
+                showTable();
+            } else if ($(this).hasClass("artist_song_alphabetically_text")) {
+                showTable();
+            }
         });
     });
 
+    // 상세정보를 누르면 최신순, 인기순, 가나다순, 전체재생, 전체선택이 안보이게 하는 기능
+    $(".show_info").click(function () {
+        $(".artist_sort_and_play").hide();
+        if( $(".show_table").click(function () {
+            $(".artist_sort_and_play").show();
+        }));
+    });
+
+    // 앨범을 누르면 최신순, 인기순, 가나다순이 보이게 하는 기능
+    $(".show_album").click(function () {
+        $(".artist_sort_and_play").show();
+    });
+
+    // 곡, 앨범, 상세정보를 누르면 색깔이 바뀌게 하는 기능
     $(document).ready(function() {
         // 클릭한 요소를 초록색으로 변경
         $(".show_table, .show_album, .show_info").click(function() {
@@ -364,8 +366,6 @@
             }
         }
     }
-
-
 
 </script>
 </html>
