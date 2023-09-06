@@ -14,7 +14,7 @@ public class AlbumController {
      */
     @GetMapping
     public String album_song(){
-        return "/album/album";
+        return "album/album";
     }
 
 }
