@@ -46,12 +46,12 @@ input,button{border: none;}
     color: #ffffff;
 }
 .song_button .data_form label {
-    color: #a9a9a9;
+    color: #ffffff;
     font-size: 14px;
     margin: 14px 0;
 }
 .song_button form p {
-    color: #a9a9a9;
+    color: #ffffff;
     margin: 12px 0;
 }
 .song_button form textarea {

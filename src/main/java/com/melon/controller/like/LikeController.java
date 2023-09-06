@@ -9,6 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LikeController {
 
 	/**
+	 * 좋아요 조회
+	 * @like 방수현 (2023.09.06)
+	 */
+	@GetMapping
+	public String like(){
+		return "like/like";
+	}
+
+	/**
 	* 좋아요 조회
 	* @like 김훈규 (2023.09.04)
 	*/
@@ -25,4 +34,6 @@ public class LikeController {
 	public String like_album() {
 		return "like/likealbum";
 	}
+
+
 }
