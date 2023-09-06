@@ -10,7 +10,7 @@ public class TicketController {
 	
 	/**
 	* 티켓 조회
-	* @like 김훈규 (2023.09.05)
+	* @author 임휘재 (2023.09.06)
 	*/
 	
 	@GetMapping("/sale")
