@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body{
+	color: white;
+}
+
+.ticket_sale,
+.ticket_free{
+	display:none;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #65f023;
+}
+
+.head{
+	margin-left:20px;
+	width:500px;
+	display:flex;
+}
+
+.head2{
+	display:flex;
+	width:1200px;
+	margin-left:40px;
+}
+
+.boxhead {
+	font-size:30px;
+	margin:20px;
+	float:left;
+	width: 80px;
+}
+
+.head .box{
+	font-size:15px;
+	width: 80px;
+	margin: 20px;
+}
+
+.head2 .box{
+	font-size:15px;
+	width: 150px;
+	margin: 20px;
+}
+
+/* 10플러스 정기결제 */
+
+.streaming{
+	border: 1px solid white;
+	width: 1200px;
+	height: 200px;
+	margin-left: 50px;
+	margin-top: 10px;
+	border-radius: 10px;   
+}
+
+.streaming .mp3{
+	border: 1px solid white;
+	margin-top: 50px;
+	margin-left: 50px;
+	font-size: 1.5rem;
+}
+
+.streaming .pic{
+	border: 1px solid blue;
+	display: flex;
+	
+}
+
+.streaming .price{
+	border: 1px solid red;
+    width: 300px; height: 50px; line-height: 50px;
+    display: flex;  
+}
+
+.streaming .buy{
+text-align: right;
+}
+
+.streaming .read{
+	border: 1px solid white;
+	margin-left: 50px;
+	width:300px;
+	padding:10px;
+	
+}
+
+
+
+
+.streaming2{
+	border: 1px solid white;
+	width: 1200px;
+	height: 200px;
+	margin-left: 50px;
+	margin-top: 50px;
+	border-radius: 10px;
+	display:flex;
+}
+
+.left{
+	border: 1px solid blue;
+	height: 100%;
+	width: 50%;
+	display:flex;
+	align-items: center;
+}
+
+.left_text{
+	border: 1px solid blue;
+	width: 300px;
+	height:60px;
+	margin-left: 50px;
+}
+.left_text p:nth-child(1) {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.right{
+	border: 1px solid red;
+	height: 100%;
+	width: 50%;
+	display:flex;
+	align-items: center; 
+	justify-content:flex-end; 
+}
+
+.right_text{
+	border: 1px solid blue;
+	display:flex;
+	width: 300px;
+	height: 30px;
+	justify-content:flex-end;
+	align-items: center;
+}
+.right_text p {
+	border: 1px solid white; width: 100px;
+}

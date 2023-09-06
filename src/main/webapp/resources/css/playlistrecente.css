@@ -15,42 +15,42 @@ a:hover{
 
 .head{
 	margin-left:20px;
-	border: 1px soild white;
+
 	width:500px;
 	display:flex;
 }
 
 .head2{
-	border: 1px soild white;
+
 	display:flex;
 	width:1200px;
 	margin-left:40px;
 }
 
 .boxhead {
-	border: 1px soild white;
+
 	font-size:30px;
 	margin:20px;
 	float:left;
-	width: 80px;
+	width: 150px;
 }
 
 .head .box{
-	border: 1px soild white;
+
 	font-size:15px;
 	width: 30px;
 	margin: 20px;
 }
 
 .head2 .box{
-	border: 1px soild #fff;
+
 	font-size:15px;
 	width: 90px;
 	margin: 10px;
 }
 
 .head2 .head3{
-	border: 1px soild white;
+
 	display: flex;
 	margin-left:45%;
 	width: 500px;
@@ -65,30 +65,30 @@ a:hover{
 }
 
 
-.like_list{
+.playlistrecente_list{
 	border: 1px soild white;
 	width:1200px;
 	margin-left:40px;
 }
 
-.like_list tbody tr td:nth-child(1){
+.playlistrecente_list tbody tr td:nth-child(1){
 	width:5%;
 }
 
-.like_list tbody tr td:nth-child(2){
+.playlistrecente_list tbody tr td:nth-child(2){
 	width:5%;
 }
 
-.like_list tbody tr td:nth-child(3){
+.playlistrecente_list tbody tr td:nth-child(3){
 	width:40%;
 }
 
-.like_list th,
-.like_list td{
+.playlistrecente_list th,
+.playlistrecente_list td{
 	padding:15px;
 	border: 1px soild #fff;
 	border-top: 1px solid #fff;
 }
 
-#like_heart .white1{font-size: 1.1rem; font-weight: 300; color: #fff;}
-#like_heart .green{font-size: 1.1rem; font-weight: 300; color: #04E632 !important;}
+#playlistrecente_heart .playlistrecente_white{font-size: 1.1rem; font-weight: 300; color: #fff;}
+#playlistrecente_heart .green{font-size: 1.1rem; font-weight: 300; color: #04E632 !important;}
