@@ -14,7 +14,7 @@ public class SongController {
 	@GetMapping("/popular")
 	public String getPopularChart() {
 		
-		return "song/popularcharts";
+		return "song/popular_charts";
 	}
 	/**
 	* 최신노래 조회
@@ -23,15 +23,6 @@ public class SongController {
 	@GetMapping("/recente/song")
 	public String getRecenteSong() {
 		
-		return "song/recentesong";
-	}
-	/**
-	* 최신앨범 조회
-	* @author 여수한
-	*/
-	@GetMapping("/recente/album")
-	public String getRecenteAlbum() {
-		
-		return "song/recentealbum";
+		return "song/recente_song";
 	}
 }
