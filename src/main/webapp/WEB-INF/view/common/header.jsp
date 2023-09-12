@@ -8,10 +8,18 @@
             <input type="text" name="result">
         </form>
     </div>
-    <div class="header_right">
-        <form action="/login" method="GET"><button>로그인</button></form>
-        <form action="/join" method="GET"><button>회원가입</button></form>
-    </div>
+    <c:if test="${empty user}">
+	    <div class="header_right">
+	        <form action="/login" method="GET"><button>로그인</button></form>
+	        <form action="/join" method="GET"><button>회원가입</button></form>
+	    </div>
+    </c:if>
+    <c:if test="${!empty user}">
+	    <div class="header_right">
+			<form action="" method="GET"><button>이용권 구매</button></form>
+	        <form action="/login/logout" method="GET"><button>로그아웃</button></form>
+	    </div>    	
+    </c:if>
     <aside class="aside">
         <div class="playsong_info">
             <img src="<%=request.getContextPath()%>/resources/Img/next_level_img.png">

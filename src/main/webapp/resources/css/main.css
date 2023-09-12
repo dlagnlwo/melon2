@@ -14,6 +14,21 @@
     font-style: normal;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+	-webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset;
+    box-shadow: 0 0 0px 1000px #2a2a2a inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 input:focus,textarea:focus,select:focus{outline:none; border:none;}
 a,a:active,a:visited,a:hover{text-decoration: none;}
 body{background-color: #2a2a2a; font-family: 'SUIT-Regular';}
@@ -27,7 +42,7 @@ input[type="checkbox"]:hover{cursor: pointer;}
 .header_left_read{position: absolute; top: 25px; left: 28px; color: #aaa; font-size: 0.9rem; line-height: 0;}
 
 .header_right{position:  relative; display: flex; width: 50%; justify-content: flex-end;}
-.header_right button{width: 70px; height: 28px; margin: 20px; border-radius: 11px; background-color: #2a2a2a; color: #ababab; border: 2px solid #4c4c4c; position: relative; z-index: 2; font-family: 'SUIT-Regular';}
+.header_right button{width: 90px; height: 28px; margin: 20px; border-radius: 11px; background-color: #2a2a2a; color: #ababab; border: 2px solid #4c4c4c; position: relative; z-index: 2; font-family: 'SUIT-Regular';}
 .header_right button::before{content: '';position: absolute;top: 0; left: 0; width: 0%; height: 100%; background-color: #444; z-index: -1; transition: all 0.2s; border-radius: 9px;}
 .header_right button:hover::before{width: 100%;}
 .header_right button:hover{color: #bbb;}
