@@ -10,7 +10,17 @@
     <%@ include file="/WEB-INF/view/common/aside.jsp" %>
     <div class="wrap">
         <div class="with_playlist">
-            <h3>null님 함께들어요 → </h3>
+        <c:if test="${empty user}">
+        	<h3>함께 들어요 → </h3>
+        </c:if>
+        <c:if test="${!empty user}">
+        	<c:if test="${!empty user.nick }">
+        		<h3>${user.nick}님 함께 들어요 → </h3>
+        	</c:if>
+        	<c:if test="${empty user.nick }">
+        		<h3>${user.name}님 함께 들어요 → </h3>
+        	</c:if>
+        </c:if>
             <table>
                 <tbody>
                     <tr>

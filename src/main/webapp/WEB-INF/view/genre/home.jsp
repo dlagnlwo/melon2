@@ -45,7 +45,7 @@
    				<li class="myballade">발라드</li>
    				<li class="mydance">댄스</li>
    				<li class="myhiphop">국내힙합</li>
-   				<li class="myidol">아이돌</li>
+   				<li class="myindie">인디</li>
    				<li class="myrnb">국내R&B</li>
    				<li class="myost">OST</li>
    				<li class="myforeign">해외</li>
@@ -57,7 +57,7 @@
 	   				<li class="ballade">발라드 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
 	   				<li class="dance">댄스 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
 	   				<li class="hiphop">국내힙합 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
-	   				<li class="idol">아이돌 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
+	   				<li class="indie">인디 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
 	   				<li class="rnb">국내R&B <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
 	   				<li class="indie">OST <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
 	   				<li class="indie">해외 <i class="fa-solid fa-plus plus"></i><i class="fa-solid fa-check check"></i></li>
