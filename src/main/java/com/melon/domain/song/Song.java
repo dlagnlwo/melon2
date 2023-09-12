@@ -30,10 +30,8 @@ public class Song {
     private String lyrics;
     private int playCount;
     private int songLike;
-
-    @OneToOne
-    @JoinColumn(name = "likeCnt")
-    private UserLike userLike;
+    @Column(length = 1)
+    private String songTitle;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "genreId")

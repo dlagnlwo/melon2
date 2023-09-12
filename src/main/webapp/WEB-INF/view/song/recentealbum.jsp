@@ -22,7 +22,7 @@
 			</div>
 			<ul>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>
@@ -33,7 +33,7 @@
 					</div>
 				</li>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>
@@ -44,7 +44,7 @@
 					</div>
 				</li>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>
@@ -55,7 +55,7 @@
 					</div>
 				</li>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>
@@ -66,7 +66,7 @@
 					</div>
 				</li>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>
@@ -77,7 +77,7 @@
 					</div>
 				</li>
 				<li>
-					<a href="#"> 
+					<a href="#">
 						<img src="<%=request.getContextPath()%>/resources/Img/album2.png"
 							style="width: 200px;">
 					</a>

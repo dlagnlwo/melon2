@@ -22,15 +22,15 @@ public class UserLike {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int likeCnt;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "songId")
     private Song song;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "albumId")
     private Album album;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "artistId")
     private Artist artist;
 

@@ -25,7 +25,10 @@ public class Album {
     private byte[] albumImg;
     private String albumType;
     private String albumName;
-    private int albumLike;
+    private Integer albumLike;
+    private String albumPublisher;
+    private String albumAgency;
+//    private String albumGenre;
 
     @OneToOne
     @JoinColumn(name = "likeCnt")
