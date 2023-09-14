@@ -20,12 +20,18 @@
             S.ALBUM_ID = A.ALBUM_ID
           AND
             AR.ARTIST_ID = #{artistId}
+          AND
+            ROWNUM = 1
     </select>
+
+    <!--    가수 노래 최신순  -->
 
     <select id="selectArtistSongs" parameterType="int" resultType="com.melon.dto.artist.ArtistDto">
         SELECT
             A.ALBUM_ID AS albumId,
             A.ALBUM_NAME AS albumName,
+            A.RELEASE_DATE AS releaseDate,
+            A.ALBUM_LIKE AS albumLike,
             S.SONG_ID AS songId,
             S.SONG_NAME AS songName,
             AR.ARTIST_ID AS artistId,
@@ -38,6 +44,56 @@
             S.ARTIST_ID = AR.ARTIST_ID
           AND
             AR.ARTIST_ID = #{artistId}
+        ORDER BY
+            TO_DATE(A.RELEASE_DATE, 'YYYY-MM-DD') DESC
+    </select>
+
+    <!--    가수 노래 인기순(좋아요 기준)-->
+
+    <select id="ArtistPopularSongsSort" parameterType="int" resultType="com.melon.dto.artist.ArtistDto">
+        SELECT
+            A.ALBUM_ID AS albumId,
+            A.ALBUM_NAME AS albumName,
+            A.RELEASE_DATE AS releaseDate,
+            A.ALBUM_LIKE AS albumLike,
+            S.SONG_ID AS songId,
+            S.SONG_NAME AS songName,
+            AR.ARTIST_ID AS artistId,
+            AR.ARTIST_NAME AS artistName
+        FROM
+            ALBUM A, SONG S, ARTIST AR
+        WHERE
+            A.ALBUM_ID = S.ALBUM_ID
+          AND
+            S.ARTIST_ID = AR.ARTIST_ID
+          AND
+            AR.ARTIST_ID = #{artistId}
+        ORDER BY
+            A.ALBUM_LIKE DESC
+    </select>
+
+    <!--    가수 노래 가나다순 -->
+
+    <select id="ArtistSongNameSort" parameterType="int" resultType="com.melon.dto.artist.ArtistDto">
+        SELECT
+            A.ALBUM_ID AS albumId,
+            A.ALBUM_NAME AS albumName,
+            A.RELEASE_DATE AS releaseDate,
+            A.ALBUM_LIKE AS albumLike,
+            S.SONG_ID AS songId,
+            S.SONG_NAME AS songName,
+            AR.ARTIST_ID AS artistId,
+            AR.ARTIST_NAME AS artistName
+        FROM
+            ALBUM A, SONG S, ARTIST AR
+        WHERE
+            A.ALBUM_ID = S.ALBUM_ID
+          AND
+            S.ARTIST_ID = AR.ARTIST_ID
+          AND
+            AR.ARTIST_ID = #{artistId}
+        ORDER BY
+            S.SONG_NAME ASC
     </select>
 
     <select id="selectArtistAlbums" parameterType="int" resultType="com.melon.dto.artist.ArtistDto">
@@ -47,6 +103,7 @@
             AR.ARTIST_ID AS artistId,
             AR.ARTIST_NAME AS artistName,
             A.ALBUM_ID AS albumId,
+            A.ALBUM_NAME AS albumName,
             A.RELEASE_DATE AS releaseDate
         FROM
             ALBUM A, SONG S, ARTIST AR
@@ -55,6 +112,26 @@
         AND
             S.ARTIST_ID = AR.ARTIST_ID
         AND
+            AR.ARTIST_ID = #{artistId}
+    </select>
+
+
+    <!--    가수 앨범목록 중복 제거-->
+    <select id="ArtistAlbumsRemoveDuplication" parameterType="int" resultType="com.melon.dto.artist.ArtistDto">
+        SELECT DISTINCT
+            A.ALBUM_NAME AS albumName,
+            AR.ARTIST_NAME AS artistName,
+            A.RELEASE_DATE AS releaseDate,
+            A.ALBUM_ID AS albumId,
+            AR.ARTIST_ID AS artistId,
+            S.SONG_ID AS songId
+        FROM
+            ALBUM A, SONG S, ARTIST AR
+        WHERE
+            A.ALBUM_ID = S.ALBUM_ID
+          AND
+            S.ARTIST_ID = AR.ARTIST_ID
+          AND
             AR.ARTIST_ID = #{artistId}
     </select>
 
@@ -74,6 +151,8 @@
             S.GENRE_ID = G.GENRE_ID
           AND
             AR.ARTIST_ID = #{artistId}
+          AND
+            ROWNUM = 1
     </select>
 
 

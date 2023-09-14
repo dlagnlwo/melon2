@@ -2,6 +2,7 @@ package com.melon.controller;
 
 import javax.servlet.http.HttpSession;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +14,12 @@ import com.melon.dto.common.LoginDto;
 import com.melon.service.common.LoginService;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/login")
 public class LoginController {
 	
-	@Autowired
-	LoginService loginService;
+
+	private final LoginService loginService;
 	
     @GetMapping
     private String login(){

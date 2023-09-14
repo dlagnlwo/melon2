@@ -35,6 +35,19 @@ public interface IArtistService {
      */
     ArtistDto getArtistActivity(int artistId);
 
+    /**
+     * 가수 노래 최신순, 인기순, 가나다순
+     *
+     * @author 임휘재
+     */
+    List<ArtistDto> getArtistSongsSort(int artistId, String sortType);
+
+    /**
+     * 가수 앨범 목록 중복 제거
+     *
+     * @author 임휘재
+     */
+    List<ArtistDto> ArtistAlbumsRemoveDuplication(int artistId);
 
 
 }

@@ -2,6 +2,8 @@ package com.melon.dto.artist;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class ArtistDto {
     private int albumId;
@@ -18,5 +20,6 @@ public class ArtistDto {
     private String releaseDate;
     private String genreName;
     private String artistPro;
+    private int albumLike;
 
 }

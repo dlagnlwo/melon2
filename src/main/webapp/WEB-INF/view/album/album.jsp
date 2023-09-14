@@ -82,7 +82,6 @@
                     </div>
                 </div>
             </div>
-            <c:if test="${not empty albumDetails}">
             <table class="song_tb">
                 <thead class="head_th">
                     <tr>
@@ -97,7 +96,7 @@
                     </tr>
                 </thead>
                 <tbody class="body_tb">
-                <c:forEach items="songs" var="songs">
+                <c:forEach items="${getAlbumSongList}" var="songs">
                     <tr>
                         <td><input type="checkbox" class="check_tb"></td>
                         <td>
@@ -105,10 +104,10 @@
                                 <p>${startNumber}</p>
                         </td>
                         <td>
-                            <div class="song_name_tb">${albumDetails.songName}</div>
+                            <div class="song_name_tb">${songs.songName}</div>
                         </td>
                         <td>
-                            <a href="/artist/${albumDetails.albumId}" class="artist_name_tb">${albumDetails.artistName}</a>
+                            <a href="/artist/${songs.artistId}" class="artist_name_tb">${songs.artistName}</a>
                         </td>
                         <td>
                             <strong>♥ &nbsp</strong>13,215 개
@@ -126,7 +125,6 @@
                 </c:forEach>
                 </tbody>
             </table>
-            </c:if>
             <div class="album_detail_body" style="display: none">
                 <div class="album_information_body">
                     <div class="album_detail_name_box">

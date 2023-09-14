@@ -1,6 +1,7 @@
 package com.melon.controller.album;
 
 import com.melon.dto.album.AlbumDetails;
+import com.melon.dto.artist.ArtistDto;
 import com.melon.dto.comment.CommentDto;
 import com.melon.dto.comment.CommentSaveDto;
 import com.melon.service.album.IAlbumService;
@@ -31,7 +32,7 @@ public class AlbumController {
         model.addAttribute("albumDetails", albumDetails);
 
         List<AlbumDetails> getAlbumSongList = albumService.getAlbumSongList(albumId);
-        model.addAttribute("songs", getAlbumSongList);
+        model.addAttribute("getAlbumSongList", getAlbumSongList);
 
         AlbumDetails albumDetail = albumService.getAlbumDetail(albumId);
         model.addAttribute("albumDetail", albumDetail);

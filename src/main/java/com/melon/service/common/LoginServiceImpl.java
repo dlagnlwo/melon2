@@ -2,6 +2,7 @@ package com.melon.service.common;
 
 import javax.servlet.http.HttpSession;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -10,10 +11,11 @@ import com.melon.dto.common.LoginDto;
 import com.melon.repository.common.LoginRepository;
 
 @Service
+@RequiredArgsConstructor
 public class LoginServiceImpl implements LoginService{
 	
-	@Autowired
-	LoginRepository loginRepository;
+
+	private final LoginRepository loginRepository;
 	
 	@Override
 	public String login(LoginDto m, HttpSession session, RedirectAttributes rttr) {

@@ -26,14 +26,19 @@
             AR.artist_id = S.artist_id
           AND
             A.album_id = #{albumId}
+          AND
+            ROWNUM = 1
     </select>
 
     <select id="selectAlbumSongList" parameterType="int" resultType="com.melon.dto.album.AlbumDetails">
         SELECT
             A.ALBUM_ID AS albumId,
+            A.ALBUM_NAME AS albumName,
             S.SONG_ID AS songId,
             S.SONG_NAME AS songName,
-            AR.ARTIST_NAME AS artistName
+            AR.ARTIST_NAME AS artistName,
+            AR.ARTIST_ID AS artistId,
+            A.ALBUM_LIKE AS albumLike
         FROM
             ALBUM A, SONG S, ARTIST AR
         WHERE
@@ -63,6 +68,8 @@
             S.GENRE_ID = G.GENRE_ID
           AND
             A.ALBUM_ID = #{albumId}
+          AND
+            ROWNUM = 1
     </select>
 
     <!-- 댓글 작성-->

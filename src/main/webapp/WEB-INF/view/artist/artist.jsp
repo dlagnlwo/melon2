@@ -64,7 +64,7 @@
             <div class="artist_sort_and_play">
                 <div class="artist_song_sort_box">
                     <div class="artist_song_latest_box">
-                        <span class="artist_song_latest_text sort" onclick="showTable()">최신순</span>
+                        <span class="artist_song_latest_text sort">최신순</span>
                     </div>
                     <div class="artist_song_popularity_box">
                         <span class="artist_song_popularity_text" onclick="showTable()">인기순</span>
@@ -97,11 +97,12 @@
                     <th><p>곡명</p></th>
                     <th><p>아티스트명</p></th>
                     <th><p>앨범명</p></th>
+                    <th><p>발매일</p></th>
                     <th><p>좋아요</p></th>
                     <th><p>재생</p></th>
                 </tr>
                 </thead>
-                <tbody class="body_tb">
+                <tbody class="body_tb" id="artistSongsTable">
                 <c:forEach items="${artistSongs}" var="song">
                     <tr>
                         <td><input type="checkbox" class="check_tb"></td>
@@ -115,12 +116,17 @@
                         </td>
                         <td>
                             <div class="artist_name_tb">${song.artistName}</div>
+                            <input type="hidden" name="artistId" value="${song.artistId}" id="artistId"/>
                         </td>
                         <td>
                             <a href="/album/${song.albumId}" class="artist_album_name_tb">${song.albumName}</a>
+                            <input type="hidden" name="albumId" value="${song.albumId}" id="albumId">
                         </td>
                         <td>
-                            <p><strong>♥ &nbsp</strong>55,799</p>
+                            <p id="song_releaseDate">${song.releaseDate}</p>
+                        </td>
+                        <td>
+                            <p id="song_albumLike"><strong>♥ &nbsp</strong>${song.albumLike}</p>
                         </td>
                         <td>
                             <p><i class="fa-solid fa-play"></i></p>
@@ -129,20 +135,20 @@
                 </c:forEach>
                 </tbody>
             </table>
-            <div class="artist_album" style="display: none">
+            <div class="artist_album" style="display: none" id="artistAlbumsList">
                 <div class="artist_album_list">
+                    <c:forEach items="${removeDuplication}" var="albums">
+                        <input type="hidden" name="albumArtistId" value="${albums.artistId}" id="albumArtistId"/>
                     <div class="artist_album_list_box">
                         <div class="artist_album_list_img">
-                            <img src="/resources/Img/OMG.jpg">
+                            <a href="/album/${albums.albumId}"><img src="/resources/Img/OMG.jpg"></a>
                         </div>
-                        <c:forEach items="${artistAlbums}" var="albums">
                         <div class="artist_album_text_box">
-                            <a href="#">${albums.albumName}</a>
-                            <p>${albums.songName}</p>
+                            <a href="/album/${albums.albumId}">${albums.albumName}</a>
                             <p>${albums.releaseDate}</p>
                         </div>
-                        </c:forEach>
                     </div>
+                    </c:forEach>
                 </div>
             </div>
             <div class="artist_info_body" style="display: none">

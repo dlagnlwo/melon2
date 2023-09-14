@@ -8,9 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,20 +21,22 @@ public class ArtistController {
     private final IArtistService artistService;
 
     /**
-     * 가수 곡 조회, 가수 앨범 조회, 가수 상세정보 조회
+     * 가수 정보, 가수 곡 조회, 가수 앨범 조회, 가수 상세정보 조회
      * @author 임휘재
      */
     @GetMapping("/{artistId}")
     public String artistMain(@PathVariable("artistId") int artistId,
                              Model model){
-        log.info("artistId : {}", artistId);
+        //가수정보
         ArtistDto artistDto = artistService.getArtistInfo(artistId);
         model.addAttribute("artistInfo", artistDto);
         log.info("artistInfo : {}", artistDto);
 
+        //곡
         List<ArtistDto> artistDtoList = artistService.getArtistSongs(artistId);
         model.addAttribute("artistSongs", artistDtoList);
 
+        //앨범
         List<ArtistDto> artistAlbums = artistService.getArtistAlbums(artistId);
         model.addAttribute("artistAlbums", artistAlbums);
         if (!artistAlbums.isEmpty()) {
@@ -45,6 +45,7 @@ public class ArtistController {
             log.info("No albums found for this artist.");
         }
 
+        //활동정보
         try {
             ArtistDto artistActivity = artistService.getArtistActivity(artistId);
             model.addAttribute("artistActivity", artistActivity);
@@ -54,8 +55,20 @@ public class ArtistController {
                 model.addAttribute("emptyMessage", "알 수 없음");
             }
         }
+
+        List<ArtistDto> artistAlbumsRemoveDuplication = artistService.ArtistAlbumsRemoveDuplication(artistId);
+        model.addAttribute("removeDuplication", artistAlbumsRemoveDuplication);
+        log.info("remove : {}", artistAlbumsRemoveDuplication);
+
         return "artist/artist";
     }
 
+    //ajax 수록곡
+    @GetMapping("/detail/song/{artistId}")
+    @ResponseBody
+    public List<ArtistDto> artistSongSort(@PathVariable("artistId") int artistId,
+                                          @RequestParam("sortType") String sortType){
+        return artistService.getArtistSongsSort(artistId, sortType);
+    }
 
 }

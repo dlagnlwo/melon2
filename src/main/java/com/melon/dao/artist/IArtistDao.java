@@ -18,7 +18,7 @@ public interface IArtistDao {
     ArtistDto selectArtistInfo(@Param("artistId") int artistId);
 
     /**
-     * 가수 노래
+     * 가수 노래 최신순
      *
      * @author 임휘재
      */
@@ -38,6 +38,25 @@ public interface IArtistDao {
      */
     ArtistDto selectArtistActivity(@Param("artistId") int artistId);
 
+    /**
+     * 가수 노래 인기순(좋아요 기준)
+     *
+     * @author 임휘재
+     */
+    List<ArtistDto> ArtistPopularSongsSort(@Param("artistId") int artistId);
 
+    /**
+     * 가수 노래 가나다순
+     *
+     * @author 임휘재
+     */
+    List<ArtistDto> ArtistSongNameSort(@Param("artistId") int artistId);
+
+    /**
+     * 가수 앨범 목록 중복 제거
+     *
+     * @author 임휘재
+     */
+    List<ArtistDto> ArtistAlbumsRemoveDuplication(@Param("artistId") int artistId);
 
 }
