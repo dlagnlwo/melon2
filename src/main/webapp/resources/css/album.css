@@ -55,7 +55,7 @@ a {
 }
 .album_top_text > .album_top_comment {
     display: inline-block; border: 0px solid white; float: right;
-    margin-right: 196px;
+    margin-right: 202px; width: 120px;
 }
 .album_top_text > .album_top_comment > .comment {
     display: inline-block; height: 32px; line-height: 32px;
@@ -87,11 +87,15 @@ a {
     display: inline-block; margin-left: 11px;
 }
 .album_top_text > .album_top_hart {
-    display: inline-block; border: 0px solid white; float: right;
-    margin-right: 202px;
+    display: flex; border: 0px solid white; float: right;
+    margin-right: 202px; width: 120px; align-items: center;
 }
 .album_top_text > .album_top_hart > .hart {
-    display: inline-block; height: 32px; line-height: 32px;
+    display: inline-block; height: 20px; line-height: 20px; border: 0px solid white;
+    align-items: center; width: 20px; margin-right: 10px;
+}
+.album_top_text > .album_top_hart > .hart:hover {
+    color: #04E632; transition: 0.2s all; cursor: pointer;
 }
 .album_top_text > .album_top_hart > .hart_count {
     display: inline-block;
@@ -247,7 +251,7 @@ table.song_tb {
     width: 20%; min-width: 80px;
 }
 .body_tb tr td:nth-child(5){
-    width: 10%; min-width: 50px; text-align: left;
+    width: 10%; min-width: 150px; text-align: left;
 }
 .body_tb tr td:nth-child(6){
     width: 5%; min-width: 50px; text-align: center;

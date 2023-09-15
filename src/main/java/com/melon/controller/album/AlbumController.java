@@ -7,6 +7,8 @@ import com.melon.dto.comment.CommentSaveDto;
 import com.melon.service.album.IAlbumService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -72,6 +74,37 @@ public class AlbumController {
             albumService.deleteComment(commentId, albumId);
         return "redirect:/album/" + albumId;
     }
+
+    @PostMapping("/{albumId}/like/update")
+    public ResponseEntity<Integer> albumLikeCntUpdate(@PathVariable("albumId") int albumId) {
+        try {
+            String memberId = "admin";
+            albumService.albumLikeUpdate(albumId);
+            AlbumDetails dto = albumService.selectAlbumLike(albumId);
+            log.info("selectAlbumLike : {}", dto.getAlbumLike());
+            albumService.albumLikeToUserLike(albumId, memberId);
+            log.info("앨범 좋아요 증가를 user_like 테이블에 저장. memberId: {}", memberId);
+            return ResponseEntity.ok(dto.getAlbumLike());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(-1);
+        }
+    }
+
+    @PostMapping("/{albumId}/like/delete")
+    public ResponseEntity<Integer> albumLikeCntDelete(@PathVariable("albumId") int albumId) {
+        try {
+            String memberId = "admin";
+            albumService.albumLikeDelete(albumId);
+            AlbumDetails dto = albumService.selectAlbumLike(albumId);
+            log.info("selectAlbumLike : {}", dto.getAlbumLike());
+            albumService.albumLikeToUserLike(albumId, memberId);
+            log.info("앨범 좋아요 감소를 user_like 테이블에 저장. memberId: {}", memberId);
+            return ResponseEntity.ok(dto.getAlbumLike());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(1);
+        }
+    }
+
 
 
 }

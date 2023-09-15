@@ -54,6 +54,34 @@ public interface IAlbumDao {
     void deleteComment(@Param("albumId") int albumId,
                        @Param("commentId") int commentId);
 
+    /**
+     * 앨범 좋아요 증가
+     *
+     * @author 임휘재
+     */
+    void albumLikeUpdate(@Param("albumId") int albumId);
+
+    /**
+     * 앨범 좋아요 삭제
+     *
+     * @author 임휘재
+     */
+    void albumLikeDelete(@Param("albumId") int albumId);
+
+    /**
+     * 앨범 좋아요 조회
+     *
+     * @author 임휘재
+     */
+    AlbumDetails selectAlbumLike(@Param("albumId") int albumId);
+
+
+    /**
+     * 앨범의 좋아요를 좋아요 테이블에 저장
+     *
+     * @author 임휘재
+     */
+    void AlbumLikeToUserLike(@Param("albumId") int albumId, @Param("memberId") String memberId);
 
 
 }

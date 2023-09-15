@@ -25,15 +25,6 @@ public class LikeController {
 	public String like_song() {
 		return "like/likesong";
 	}
-	
-	/**
-	* 좋아요 앨범 조회
-	* @like 김훈규 (2023.09.05)
-	*/
-	@GetMapping("/album")
-	public String like_album() {
-		return "like/likealbum";
-	}
 
 
 }

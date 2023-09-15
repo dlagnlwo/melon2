@@ -52,4 +52,32 @@ public interface IAlbumService {
      */
     void deleteComment(int commentId, int albumId);
 
+    /**
+     * 앨범 좋아요 증가
+     *
+     * @author 임휘재
+     */
+    void albumLikeUpdate(int albumId);
+
+    /**
+     * 앨범 좋아요 삭제
+     *
+     * @author 임휘재
+     */
+    void albumLikeDelete(int albumId);
+
+    /**
+     * 앨범 좋아요 조회
+     *
+     * @author 임휘재
+     */
+    AlbumDetails selectAlbumLike(int albumId);
+
+    /**
+     * 앨범의 좋아요를 좋아요 테이블에 저장
+     *
+     * @author 임휘재
+     */
+    void albumLikeToUserLike(int albumId, String memberId);
+
 }

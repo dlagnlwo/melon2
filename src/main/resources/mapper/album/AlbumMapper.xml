@@ -108,4 +108,38 @@
             C.ALBUM_ID = #{albumId}
     </select>
 
+    <update id="albumLikeUpdate">
+        UPDATE
+            ALBUM
+        SET
+            ALBUM_LIKE = ALBUM_LIKE + 1
+        WHERE
+            ALBUM_ID = #{albumId}
+    </update>
+
+    <delete id="albumLikeDelete">
+        UPDATE
+            ALBUM
+        SET
+            ALBUM_LIKE = ALBUM_LIKE - 1
+        WHERE
+            ALBUM_ID = #{albumId}
+    </delete>
+
+    <select id="selectAlbumLike" parameterType="int" resultType="com.melon.dto.album.AlbumDetails">
+        SELECT
+            ALBUM_LIKE AS albumLike
+        FROM
+            ALBUM
+        WHERE
+            ALBUM_ID = #{albumId}
+    </select>
+
+    <insert id="AlbumLikeToUserLike">
+        insert into
+            USER_LIKE(LIKE_CNT, ALBUM_ID, MEMBER_ID)
+        values
+            (LIKE_CNT_SEQ.nextval, #{albumId}, #{memberId})
+    </insert>
+
 </mapper>

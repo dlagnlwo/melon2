@@ -6,6 +6,9 @@ import com.melon.service.album.AlbumServiceImpl;
 import com.melon.service.artist.IArtistService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import oracle.jdbc.proxy.annotation.Post;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -60,15 +63,97 @@ public class ArtistController {
         model.addAttribute("removeDuplication", artistAlbumsRemoveDuplication);
         log.info("remove : {}", artistAlbumsRemoveDuplication);
 
+        int artistCnt = artistService.ArtistLikeCnt(artistId);
+        model.addAttribute("artistCnt", artistCnt);
+        System.out.println(artistCnt);
+
+        //현재 좋아요 조회
+
         return "artist/artist";
     }
 
-    //ajax 수록곡
+    /**
+     * ajax 가수 곡 최신순, 인기순, 가나다순 정렬
+     * @author 임휘재
+     */
     @GetMapping("/detail/song/{artistId}")
     @ResponseBody
     public List<ArtistDto> artistSongSort(@PathVariable("artistId") int artistId,
                                           @RequestParam("sortType") String sortType){
         return artistService.getArtistSongsSort(artistId, sortType);
     }
+
+    /**
+     * 가수 좋아요 증가
+     * @author 임휘재
+     */
+    @PostMapping("/{artistId}/like/update")
+    public ResponseEntity<Integer> artistLikeCntUpdate(@PathVariable("artistId") int artistId) {
+        try {
+            String memberId = "admin";
+            artistService.ArtistLikeUpdate(artistId);
+            ArtistDto dto = artistService.getArtistLikeCntNow(artistId);
+            log.info("ArtistLikeUpdateCnt : {}", dto.getArtistLike());
+            int likeCnt = dto.getArtistLike();
+            artistService.artistLikeToUserLike(artistId, memberId);
+            log.info("가수 좋아요 증가를 user_like 테이블에 저장. memberId: {}", memberId);
+            return ResponseEntity.ok(likeCnt);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(-1);
+        }
+    }
+
+    /**
+     * 가수 좋아요 삭제
+     * @author 임휘재
+     */
+    @PostMapping("/{artistId}/like/delete")
+    public ResponseEntity<Integer> artistLikeCntDelete(@PathVariable("artistId") int artistId) {
+        try {
+            String memberId = "admin";
+            artistService.ArtistLikeDelete(artistId);
+            ArtistDto dto = artistService.getArtistLikeCntNow(artistId);
+            log.info("ArtistLikeDeleteCnt : {}", dto.getArtistLike());
+            int likeCnt = dto.getArtistLike();
+            artistService.artistLikeToUserLike(artistId, memberId);
+            log.info("가수 좋아요 감소를 user_like 테이블에 저장. memberId: {}", memberId);
+            return ResponseEntity.ok(likeCnt);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(1);
+        }
+    }
+
+    /**
+     * 가수 노래 좋아요 증가
+     * @author 임휘재
+     */
+    @PostMapping("/{artistId}/like/song/update")
+    public ResponseEntity<Integer> artistSongLikeCntUpdate(@PathVariable("artistId") int artistId) {
+        try {
+            artistService.ArtistSongLikeUpdate(artistId);
+            ArtistDto dto = artistService.ArtistSongLikeCntNow(artistId);
+            log.info("ArtistLikeSongUpdateCnt : {}", dto.getSongLike());
+            return ResponseEntity.ok(dto.getSongLike());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(-1);
+        }
+    }
+
+    /**
+     * 가수 노래 좋아요 삭제
+     * @author 임휘재
+     */
+    @PostMapping("/{artistId}/like/song/delete")
+    public ResponseEntity<Integer> artistSongLikeCntDelete(@PathVariable("artistId") int artistId) {
+        try {
+            artistService.ArtistSongLikeDelete(artistId);
+            ArtistDto dto = artistService.ArtistSongLikeCntNow(artistId);
+            log.info("ArtistLikeSongUpdateCnt : {}", dto.getSongLike());
+            return ResponseEntity.ok(dto.getSongLike());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(1);
+        }
+    }
+
 
 }

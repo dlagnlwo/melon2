@@ -21,5 +21,6 @@ public class ArtistDto {
     private String genreName;
     private String artistPro;
     private int albumLike;
+    private int songLike;
 
 }

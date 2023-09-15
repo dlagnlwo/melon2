@@ -24,4 +24,6 @@ public class SongController {
 	public String getRecenteAlbum() {
 		return "song/recente_song";
 	}
+
+
 }

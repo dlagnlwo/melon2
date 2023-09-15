@@ -85,7 +85,6 @@ $(document).ready(function () {
     });
 })
 
-
 function showDeleteSuccessAlert() {
     if (confirm('정말로 삭제하시겠습니까?')) {
         alert('삭제 성공');
@@ -98,6 +97,67 @@ function showDeleteSuccessAlert() {
 function writeSuccess() {
     alert("댓글 작성 성공");
 }
+
+
+$(document).ready(function() {
+    let isLiked = localStorage.getItem('isLiked') === 'true';
+    let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+
+    setButtonContent(isLiked);
+    updateLikeCount(likeCount);
+
+    $('.hart').click(function() {
+        let albumId = $('#albumLikeAlbumId').val();
+        let button = $(this);
+
+        if (!isLiked) {
+            $.ajax({
+                type: 'POST',
+                url: `/album/${albumId}/like/update`,
+                success: function(data) {
+                    updateLikeCount(data);
+                    button.html('<strong>♥ &nbsp;</strong>');
+                    isLiked = true;
+                    localStorage.setItem('isLiked', 'true');
+                },
+                error: function() {
+                    console.error('에러');
+                }
+            });
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: `/album/${albumId}/like/delete`,
+                success: function(data) {
+                    updateLikeCount(data);
+                    button.html('<strong>♡ &nbsp;</strong>');
+                    isLiked = false;
+                    localStorage.setItem('isLiked', 'false');
+                },
+                error: function() {
+                    console.error('에러');
+                }
+            });
+        }
+    });
+
+    function updateLikeCount(likeCount) {
+        $('.hart_count').text(likeCount);
+        // 로컬 스토리지에 좋아요 수 저장
+        localStorage.setItem('likeCount', likeCount);
+    }
+
+    function setButtonContent(isLiked) {
+        let button = $('.hart');
+        if (isLiked) {
+            button.html('<strong>♥ &nbsp;</strong>');
+        } else {
+            button.html('<strong>♡ &nbsp;</strong>');
+        }
+    }
+});
+
+
 
 
 

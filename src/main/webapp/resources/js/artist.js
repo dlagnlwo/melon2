@@ -152,7 +152,7 @@ function populateTable(data) {
         row.append(releaseDateCell);
 
         // 좋아요 컬럼
-        let albumLikeCell = $("<td>").html('<p><strong>♥ &nbsp</strong>' + data[i].albumLike + '</p>');
+        let albumLikeCell = $("<td>").html('<p><strong>♡ &nbsp</strong>' + data[i].songLike + '</p>');
         row.append(albumLikeCell);
 
         // 재생 컬럼
@@ -163,3 +163,92 @@ function populateTable(data) {
         $("#artistSongsTable").append(row);
     }
 }
+
+$(document).ready(function() {
+    let isLiked = false;
+    let isArtistEmpty = $('#hartCntAdd').data('isArtistEmpty');
+
+    if (isArtistEmpty === 'true') {
+        $('#hartCntAdd').click(function() {
+            let artistId = $('#artistInfoArtistId').val();
+            let button = $(this);
+
+            if (!isLiked) {
+                $.ajax({
+                    type: 'POST',
+                    url: `/artist/${artistId}/like/update`,
+                    success: function(data) {
+                        // 성공한 경우 좋아요 수를 업데이트
+                        updateLikeCount(data);
+                        button.html('<strong>♥ &nbsp;</strong>');
+                        isLiked = true;
+                    },
+                    error: function() {
+                        console.error('에러');
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: `/artist/${artistId}/like/delete`,
+                    success: function(data) {
+                        // 성공한 경우 좋아요 수를 업데이트
+                        updateLikeCount(data);
+                        button.html('<strong>♡ &nbsp;</strong>');
+                        isLiked = false;
+                    },
+                    error: function() {
+                        console.error('에러');
+                    }
+                });
+            }
+        });
+    } else {
+        $('#hartCntDel').click(function() {
+            let artistId = $('#artistInfoArtistId').val();
+            let button = $(this);
+
+            if (!isLiked) {
+                $.ajax({
+                    type: 'POST',
+                    url: `/artist/${artistId}/like/update`,
+                    success: function(data) {
+                        // 성공한 경우 좋아요 수를 업데이트
+                        updateLikeCount(data);
+                        button.html('<strong>♥ &nbsp;</strong>');
+                        isLiked = true;
+                    },
+                    error: function() {
+                        console.error('에러');
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: `/artist/${artistId}/like/delete`,
+                    success: function(data) {
+                        // 성공한 경우 좋아요 수를 업데이트
+                        updateLikeCount(data);
+                        button.html('<strong>♡ &nbsp;</strong>');
+                        isLiked = false;
+                    },
+                    error: function() {
+                        console.error('에러');
+                    }
+                });
+            }
+        });
+    }
+
+    function updateLikeCount(data) {
+        $('.hart_count').text(data);
+    }
+});
+
+
+
+
+
+
+
+

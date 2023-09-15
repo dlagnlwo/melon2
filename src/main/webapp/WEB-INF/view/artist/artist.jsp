@@ -1,5 +1,6 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="kor">
@@ -23,10 +24,20 @@
                     <div class="artist_top_text_box">
                         <div class="artist_top_name"><p>${artistInfo.artistName}</p></div>
                         <div class="artist_top_hart_play">
-                            <div class="hart"><strong>♥ &nbsp;</strong></div>
-                            <div class="hart_count">51,179</div>
-                            <div class="play_btn"><i class="fa-solid fa-play"></i></div>
-                            <div class="rep_song">${artistInfo.songName}</div>
+                            <div class="hart_box">
+                                <c:if test="${empty artistCnt}">
+                                    <div class="hart" id="hartCntAdd" data-isArtistEmpty="true"><strong>♡ &nbsp;</strong></div>
+                                </c:if>
+                                <c:if test="${not empty artistCnt}">
+                                    <div class="hart" id="hartCntDel" data-isArtistEmpty="false"><strong>♥ &nbsp;</strong></div>
+                                </c:if>
+                                <div class="hart_count">${artistInfo.artistLike}</div>
+                                <input type="hidden" id="artistInfoArtistId" name="artistInfoArtistId" value="${artistInfo.artistId}"/>
+                            </div>
+                            <div class="play_btn_box">
+                                <div class="play_btn"><i class="fa-solid fa-play"></i></div>
+                                <div class="rep_song">${artistInfo.songName}</div>
+                            </div>
                         </div>
                         <div class="artist_top_agency">
                             <div class="agency">소속사</div>
@@ -126,7 +137,8 @@
                             <p id="song_releaseDate">${song.releaseDate}</p>
                         </td>
                         <td>
-                            <p id="song_albumLike"><strong>♥ &nbsp</strong>${song.albumLike}</p>
+                            <fmt:formatNumber value="${song.songLike}" type="number" pattern="###,###,###" var="formattedSongLike" />
+                            <p id="song_albumLike"><strong>♡ &nbsp</strong>${formattedSongLike}</p>
                         </td>
                         <td>
                             <p><i class="fa-solid fa-play"></i></p>
@@ -205,4 +217,5 @@
 </section>
 </body>
 <script src="/resources/js/artist.js"></script>
+<script src="/resources/js/main.js"></script>
 </html>

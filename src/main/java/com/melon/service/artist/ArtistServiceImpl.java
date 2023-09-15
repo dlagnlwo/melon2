@@ -1,10 +1,12 @@
 package com.melon.service.artist;
 
 import com.melon.dao.artist.IArtistDao;
+import com.melon.dao.like.ILikeDao;
 import com.melon.dto.artist.ArtistDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -16,21 +18,41 @@ public class ArtistServiceImpl implements IArtistService{
     private final IArtistDao artistDao;
 
 
+    /**
+     * 가수 정보 조회
+     *
+     * @author 임휘재
+     */
     @Override
     public ArtistDto getArtistInfo(int artistId) {
         return artistDao.selectArtistInfo(artistId);
     }
 
+    /**
+     * 가수 곡 조회
+     *
+     * @author 임휘재
+     */
     @Override
     public List<ArtistDto> getArtistSongs(int artistId) {
         return artistDao.selectArtistSongs(artistId);
     }
 
+    /**
+     * 가수 앨범 조회
+     *
+     * @author 임휘재
+     */
     @Override
     public List<ArtistDto> getArtistAlbums(int artistId) {
         return artistDao.selectArtistAlbums(artistId);
     }
 
+    /**
+     * 가수 활동정보 조회
+     *
+     * @author 임휘재
+     */
     @Override
     public ArtistDto getArtistActivity(int artistId) {
         return artistDao.selectArtistActivity(artistId);
@@ -83,5 +105,68 @@ public class ArtistServiceImpl implements IArtistService{
         }
         return uniqueArtistAlbums;
     }
+
+
+    /**
+     * 가수 좋아요 증가
+     *
+     * @author 임휘재
+     */
+    @Override
+    public void ArtistLikeUpdate(int artistId) {
+        artistDao.ArtistLikeUpdate(artistId);
+    }
+
+    /**
+     * 가수 좋아요 감소
+     *
+     * @author 임휘재
+     */
+    @Override
+    public void ArtistLikeDelete(int artistId) {
+        artistDao.ArtistLikeDelete(artistId);
+    }
+
+    /**
+     * 가수 현재 좋아요 조회
+     *
+     * @author 임휘재
+     */
+    @Override
+    public ArtistDto getArtistLikeCntNow(int artistId) {
+        return artistDao.ArtistLikeCntNow(artistId);
+    }
+
+
+    @Override
+    public void ArtistSongLikeUpdate(int artistId) {
+        artistDao.ArtistSongLikeUpdate(artistId);
+    }
+
+    @Override
+    public void ArtistSongLikeDelete(int artistId) {
+        artistDao.ArtistSongLikeDelete(artistId);
+    }
+
+    @Override
+    public ArtistDto ArtistSongLikeCntNow(int artistId) {
+        return artistDao.ArtistSongLikeCntNow(artistId);
+    }
+
+    @Override
+    public int ArtistLikeCnt(int artistId) {
+        return artistDao.ArtistLikeCnt(artistId);
+    }
+
+    /**
+     * 가수 좋아요를 좋아요 테이블에 저장
+     *
+     * @author 임휘재
+     */
+    @Override
+    public void artistLikeToUserLike(int artistId, String memberId) {
+        artistDao.ArtistLikeToUserLike(artistId, memberId);
+    }
+
 
 }

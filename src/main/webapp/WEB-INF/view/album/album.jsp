@@ -36,8 +36,9 @@
                         <div class="genre_name">${albumDetails.genreName}</div>
                     </div>
                     <div class="album_top_hart">
-                        <div class="hart"><strong>♥ &nbsp</strong></div>
-                        <div class="hart_count">5,1179</div>
+                        <div class="hart"><strong>♡ &nbsp</strong></div>
+                        <div class="hart_count"><p>${albumDetails.albumLike}</p></div>
+                        <input type="hidden" name="albumLikeAlbumId" id="albumLikeAlbumId" value="${albumDetails.albumId}"/>
                     </div>
                     <div class="album_top_agency">
                         <div class="agency">기획사</div>
@@ -110,7 +111,7 @@
                             <a href="/artist/${songs.artistId}" class="artist_name_tb">${songs.artistName}</a>
                         </td>
                         <td>
-                            <strong>♥ &nbsp</strong>13,215 개
+                            <strong>♡ &nbsp</strong>${songs.songLike}
                         </td>
                         <td>
                             <i class="fa-solid fa-play"></i>

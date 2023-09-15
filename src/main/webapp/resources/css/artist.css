@@ -43,34 +43,44 @@ a {
     width: 1000px; height: 50px;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_hart_play {
-    border: 0px solid white; height: 40px; line-height: 40px; display: inline-block;
+    border: 0px solid white; height: 40px; line-height: 40px; display: flex;
 }
-.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart{
-    display: inline-block;
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_box{
+    border: 0px solid white; width: 108px; display: flex; align-items: center;
 }
-.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart strong:hover{
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_box > .hart{
+    border: 0px solid white; width: 20px; height: 20px; display: flex; align-items: center;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_box > .hart strong{
+    border: 0px solid red; width: 20px; height: 20px; line-height: 20px; text-align: center;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_box > .hart strong:hover{
     color: #04E632; transition: 0.2s all; cursor: pointer;
 }
-.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_count{
-    display: inline-block; font-size: 1.0rem;
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .hart_box > .hart_count{
+     font-size: 1.0rem; width: 50px; text-align: center; border: 0px solid white;
 }
-.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .play_btn{
-    display: inline-block; margin-left: 40px;
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .play_btn_box {
+     width: 491px; display: flex;
+}
+.artist_top_text > .artist_top_text_box > .artist_top_hart_play > .play_btn_box > .play_btn{
+     border: 0px solid white; margin-right: 20px;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_hart_play > .play_btn i:hover{
     color: #04E632; transition: 0.2s all; cursor: pointer;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_hart_play > .rep_song{
-    display: inline-block; margin-left: 10px;
+     margin-left: 10px;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_agency {
-    border: 0px solid white; height: 40px; line-height: 40px;
+    border: 0px solid white; height: 40px; line-height: 40px; display: flex;
+    margin-top: 10px;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_agency > .agency{
     display: inline-block; border: 0px solid white;
 }
 .artist_top_text > .artist_top_text_box > .artist_top_agency > .agency_name{
-    display: inline-block; margin-left: 65px;
+    display: inline-block; margin-left: 64px;
 }
 
 /*메뉴들이 있는 부분*/

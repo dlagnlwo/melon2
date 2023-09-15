@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 public interface IArtistDao {
@@ -58,5 +57,63 @@ public interface IArtistDao {
      * @author 임휘재
      */
     List<ArtistDto> ArtistAlbumsRemoveDuplication(@Param("artistId") int artistId);
+
+    /**
+     * 가수 좋아요 증가
+     *
+     * @author 임휘재
+     */
+    void ArtistLikeUpdate(@Param("artistId") int artistId);
+
+    /**
+     * 가수 좋아요 삭제
+     *
+     * @author 임휘재
+     */
+    void ArtistLikeDelete(@Param("artistId") int artistId);
+
+    /**
+     * 현재 가수 좋아요 수
+     *
+     * @author 임휘재
+     */
+    ArtistDto ArtistLikeCntNow(@Param("artistId") int artistId);
+
+    /**
+     * 가수 곡 좋아요 증가
+     *
+     * @author 임휘재
+     */
+    void ArtistSongLikeUpdate(@Param("artistId") int artistId);
+
+    /**
+     * 가수 곡 좋아요 삭제
+     *
+     * @author 임휘재
+     */
+    void ArtistSongLikeDelete(@Param("artistId") int artistId);
+
+    /**
+     * 현재 가수 곡 좋아요 수
+     *
+     * @author 임휘재
+     */
+    ArtistDto ArtistSongLikeCntNow(@Param("artistId") int artistId);
+
+
+    /**
+     * 가수 좋아요 조회
+     *
+     * @author 임휘재
+     */
+    int ArtistLikeCnt(@Param("artistId") int artistId);
+
+    /**
+     * 가수 좋아요를 좋아요 테이블에 저장
+     *
+     * @author 임휘재
+     */
+    void ArtistLikeToUserLike(@Param("artistId") int artistId, @Param("memberId") String memberId);
+
 
 }
