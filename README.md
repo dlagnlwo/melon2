@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/badge/jsp-E6700C?style=for-the-badge&logo=jsp&logoColor=white">
 </div>
 <div>
-  <img src="https://img.shields.io/badge/jpa-009EE0?style=for-the-badge&logo=jpa&logoColor=white">
+  <img src="https://img.shields.io/badge/mybatis-251C1D?style=for-the-badge&logo=mybatis&logoColor=white">
 </div>
 
 <div align=left><h2>맴버 구성 및 역할 분담</h2></div>
