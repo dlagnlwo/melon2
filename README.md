@@ -1,10 +1,21 @@
-# 배포 환경
+## Melon
+
+스프링 부트 + Mybatis 멜론 사이트 클론 코딩
+
+## 프로젝트 소개
+음악 스트리밍 사이트 Melon을 참고하여 만든 음악 스트리밍 사이트 입니다.
+
+## 배포 환경
 
 - `Java 17`
 - `SpringBoot 2.7.14`
- / gradle / jsp / Mybatis / Oracle Database / HTML5, CSS3
+- **IDE** : STS 3 / IntelliJ IDEA
+- **Database** : Oracle Database(21xe)
+- **ORM** : Mybatis
+- **View template** : JSP, HTML5, CSS3
+- **Build Tool** : Gradle
 
-# 역할 분담
+## 역할 분담
 팀장 여수한 : 차트(인기, 최신, 장르별, 앨범)
 
 팀원 김훈규 : 이용권 관리 페이지, 재생목록 페이지
@@ -15,7 +26,7 @@
 
 팀원 임휘재 : 앨범 페이지, 가수 페이지, 좋아요 기능
 
-# 기술 스택
+## 기술 스택
 
 
-# 요구 사항
+## 요구 사항
