@@ -2,7 +2,7 @@
 
 스프링 부트 + Mybatis 멜론 사이트 클론 코딩
 
-<img src="C:\Users\admin\Desktop\img\melonlogo.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="melon"></img>
+<img src="C:\img\melonlogo.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="melon"></img>
 
 ## 프로젝트 소개
 음악 스트리밍 사이트 Melon을 참고하여 만든 음악 스트리밍 사이트 입니다.
