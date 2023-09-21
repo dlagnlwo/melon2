@@ -9,6 +9,10 @@
 
 ### Environment
 
+<div>
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+</div>
 ### Development
 
 <div>
@@ -23,21 +27,6 @@
   <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
   <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
 </div>
-
-
-### Communication
-<div>
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-</div>
-
-- `Java 17`
-- `SpringBoot 2.7.14`
-- **IDE** : STS 3 / IntelliJ IDEA
-- **Database** : Oracle Database(21xe)
-- **ORM** : Mybatis
-- **View template** : JSP, HTML5, CSS3
-- **Build Tool** : Gradle
 
 ## 맴버 구성 및 역할 분담
 팀장 여수한 : 차트(인기, 최신, 장르별, 앨범)
