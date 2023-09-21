@@ -1,20 +1,20 @@
-# Melon 스트리밍 사이트
+<div align=left><h2>Melon 스트리밍 사이트</h2></div>
 
 스프링 부트 + Mybatis 멜론 사이트 클론 코딩
 
-## 프로젝트 소개
+<div align=left><h2>프로젝트 소개</h2></div>
 음악 스트리밍 사이트 Melon을 참고하여 만든 음악 스트리밍 사이트 입니다.
 
 <div align=left><h2>📚 STACKS</h2></div>
 
-### Environment
+<div align=left><h3>Environment</h3></div>
 
 <div>
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
   <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 </div>
 
-### Development
+<div align=left><h3>Development</h3></div>
 
 <div>
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
@@ -29,7 +29,8 @@
   <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
 </div>
 
-## 맴버 구성 및 역할 분담
+<div align=left><h2>맴버 구성 및 역할 분담</h2></div>
+
 팀장 여수한 : 차트(인기, 최신, 장르별, 앨범)
 
 팀원 김훈규 : 이용권 관리 페이지, 재생목록 페이지
