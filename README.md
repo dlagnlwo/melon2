@@ -27,6 +27,7 @@
 <div>
   <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
   <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
+  <img src="https://img.shields.io/badge/jsp-02303A?style=for-the-badge&logo=gradle&logoColor=white">
 </div>
 
 <div align=left><h2>맴버 구성 및 역할 분담</h2></div>
