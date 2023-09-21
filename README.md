@@ -5,12 +5,12 @@
 ## 프로젝트 소개
 음악 스트리밍 사이트 Melon을 참고하여 만든 음악 스트리밍 사이트 입니다.
 
-## Stacks
+<div align=left><h2>📚 STACKS</h2></div>
 
 ### Environment
 
 ### Development
-<div align=left><h2>📚 STACKS</h2></div>
+
 <div>
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
   <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white">
