@@ -1,11 +1,17 @@
-## Melon
+## Melon 스트리밍 사이트
 
 스프링 부트 + Mybatis 멜론 사이트 클론 코딩
 
 ## 프로젝트 소개
 음악 스트리밍 사이트 Melon을 참고하여 만든 음악 스트리밍 사이트 입니다.
 
-## 배포 환경
+## Stacks
+
+# Environment
+
+# Development
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+# Communication
 
 - `Java 17`
 - `SpringBoot 2.7.14`
@@ -15,7 +21,7 @@
 - **View template** : JSP, HTML5, CSS3
 - **Build Tool** : Gradle
 
-## 역할 분담
+## 맴버 구성 및 역할 분담
 팀장 여수한 : 차트(인기, 최신, 장르별, 앨범)
 
 팀원 김훈규 : 이용권 관리 페이지, 재생목록 페이지
