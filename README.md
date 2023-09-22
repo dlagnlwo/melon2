@@ -26,8 +26,6 @@
   <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
   <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
   <img src="https://img.shields.io/badge/jsp-E6700C?style=for-the-badge&logo=jsp&logoColor=white">
-</div>
-<div>
   <img src="https://img.shields.io/badge/mybatis-251C1D?style=for-the-badge&logo=mybatis&logoColor=white">
 </div>
 
@@ -42,10 +40,32 @@
 **😺팀원 임휘재** : 앨범 페이지, 가수 페이지, 좋아요 기능
 
 <div align=left><h2>💻 화면 구성</h2></div>
+<div align=center>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/b647cfbc-ea49-4ff7-9c29-b20d3ddd991f.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/db45d2c4-acf8-427c-b277-db70fe1f16f8.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/a9126c37-905f-4914-b170-03b4f7c37f4e.jpg"/>
+</div>
+<div align=center>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/6052a0c3-417c-4ce7-8a61-9b467b938f5d.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/1e7611a5-6dd1-4ce5-90cf-51dddba063a7.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/954ec29a-b1d6-4f75-8eaf-dbf52117ffe4.jpg"/>
+</div>
+<div align=center>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/aad51c7a-7489-4d5b-8987-0549c1131e7d.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/2077bab9-908a-4ebf-ac7c-7f819738ada6.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/cf1e6386-c225-4bb5-a5f2-e75a2d29c455.jpg"/>
+</div>
+<div align=center>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/24b0ebe5-c461-4b6d-a50e-bd961939c6de.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/debd1210-6e50-4846-b6c7-246fe5757e92.jpg"/>
+    <img width="30%" src="https://github.com/Bangsuhyun96/melon/assets/105468233/df76913b-39ed-419c-8ac0-33d3073e621f.jpg"/>
+</div>
 
 <div align=left><h2>💡 주요 기능</h2></div>
 
-### 로그인 및 회원가입 기능
+### 회원가입 및 로그인 기능
+- 회원가입시 아이디 중복 확인 및 정규식을 이용한 유효성 검사와 아이디에 대해 중복검사를 적용한다.
+- 회원가입이 완료되면 로그인된 상태로 메인페이지로 리디렉션한다.
 
 ### 인기차트
 - 인기차트에서 2가지 조회수를 계산해 나온 결과로 1시간마다 목록이 업데이트 된다.
